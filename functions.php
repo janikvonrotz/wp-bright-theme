@@ -57,3 +57,18 @@ function bright_setup() {
 }
 endif; // bright_setup
 add_action( 'after_setup_theme', 'bright_setup' );
+
+/**
+ * Enqueue scripts and styles
+ */
+function bright_scripts() {
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'bright_scripts' );
+
+function bright_styles() {
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'bright_styles' );
