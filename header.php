@@ -1,5 +1,4 @@
 <?php
-
 # Title: The Header for this theme
 
 # File name: header.php

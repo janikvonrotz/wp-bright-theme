@@ -1,5 +1,4 @@
 <?php
-
 # Title: Bright functions and definitions
 
 # File name: functions.php

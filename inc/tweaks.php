@@ -1,5 +1,4 @@
 <?php
-
 # Title: Custom functions that act independently of the theme templates
 
 # File name: header.php
