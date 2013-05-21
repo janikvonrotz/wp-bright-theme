@@ -1,12 +1,19 @@
 <?php
-/**
- * The Header for this theme.
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package Bright
- * @since Bright 1.0
- */
+
+# Title: The Header for this theme
+
+# File name: header.php
+# Description: Displays all of the <head> section and everything up till <div id="main">
+# Tags: wordpress, theme, header
+# Project: Bright
+
+# Author: Janik von Rotz
+# Author Contact: http://janikvonrotz.ch
+
+# Create Date: 2013-05-17
+# Last Edit Date: 2013-05-17
+# Version: 1.0.0
+
 ?><!DOCTYPE html>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
@@ -42,20 +49,48 @@
  
 <body <?php body_class(); ?>>
 
-<div id="page" class="hfeed site">
-	<header id="masthead" class="site-header" role="banner">
+<div id="page" class="container hfeed">
+
+	<div id="masthead" class="site-header header" role="banner">
 		
-		<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		
-		<nav role="navigation" class="site-navigation main-navigation">
-		
-			<h1 class="assistive-text"><?php _e( 'Menu', 'bright' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'bright' ); ?>"><?php _e( 'Skip to content', 'bright' ); ?></a></div>
+		<div class="row-fluid">		
+			<div class="span12 pagination-centered logo">
 			
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<img src="content/logo.png" alt="logo" />
+				
+			</div>		
+		</div>		
+
+		<div class="row-fluid">
+			<div class="span12 pagination-centered page-header">
+			
+				<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-description"><small><?php bloginfo( 'description' ); ?></small></h1>
+				
+			</div>			
+		</div>	
+
+		<div class="row-fluid">		
+			<div class="span12 pagination-centered">
+				<nav role="navigation" class="site-navigation main-navigation">
+					
+					<!--
+					 <h1 class="assistive-text"><?php _e( 'Menu', 'bright' ); ?></h1>
+					 <div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'bright' ); ?>"><?php _e( 'Skip to content', 'bright' ); ?></a></div>
+					-->
+					
+					<p class="visible-phone menu"><span class="icon-grid-big"></span></i></p>
+					
+					<?php wp_nav_menu( array(
+						'theme_location' => 'primary'
+					) ); ?>
 		
-		</nav><!-- .site-navigation .main-navigation -->
+				</nav>			
+			</div>			
+		</div>
 	
-	</header><!-- #masthead .site-header -->
-<div id="main" class="site-main">
+	</div>
+	
+<div class="overlay hide"></div>
+
+<div id="main" class="content site-main">
