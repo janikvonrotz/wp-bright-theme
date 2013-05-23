@@ -140,7 +140,7 @@ function bright_styles() {
 	
 	// Metrize_Icons
 	wp_register_style( 'Metrize_Icons', 
-	get_template_directory_uri() . '/components/WebProject-Resources/icons/metro-social/style.css', 
+	get_template_directory_uri() . '/components/WebProject-Resources/icons/Metrize_Icons/Font-Face/style.css', 
 	array(), 
 	'20130516', 
 	'all' );
