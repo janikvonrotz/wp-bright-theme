@@ -138,13 +138,13 @@ function bright_styles() {
 	'all' );
 	wp_enqueue_style( 'fancybox-thumbs' );
 
-	// Metrize_Icons thumbs
-	wp_register_style( 'Metrize_Icons', 
-	get_template_directory_uri() . '/components/Metrize_Icons/Font-Face/style.css', 
+	// icons-metro-social
+	wp_register_style( 'icons-metro-social', 
+	get_template_directory_uri() . '/components/WebProject-Resources/icons/metro-social/style.css', 
 	array(), 
 	'20130516', 
 	'all' );
-	wp_enqueue_style( 'Metrize_Icons' );
+	wp_enqueue_style( 'icons-metro-social' );
 
 	// google font
 	wp_register_style( 'google-font', 
