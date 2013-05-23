@@ -50,6 +50,7 @@
 
 <div id="page" class="container hfeed">
 
+	<header>
 	<div id="masthead" class="site-header header" role="banner">
 		
 		<div class="row-fluid">		
@@ -89,6 +90,7 @@
 		</div>
 	
 	</div>
+	</header>
 	
 <div class="overlay hide"></div>
 

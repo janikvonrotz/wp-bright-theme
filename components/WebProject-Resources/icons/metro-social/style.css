@@ -27,7 +27,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-social-500px, .icon-social-addthis, .icon-social-bebo, .icon-social-behance, .icon-social-blogger, .icon-social-deviantart, .icon-social-digg, .icon-social-dribbble, .icon-social-email, .icon-social-envato, .icon-social-evernote, .icon-social-facebook, .icon-social-flickr, .icon-social-forrst, .icon-social-github, .icon-social-google-plus, .icon-social-grooveshark, .icon-social-kippt, .icon-social-last-fm, .icon-social-linkedin, .icon-social-myspace, .icon-social-paypal, .icon-social-pencode, .icon-social-photobucket, .icon-social-pinterest, .icon-social-quora, .icon-social-sharethis, .icon-social-skype, .icon-social-soundcloud, .icon-social-stumbleupon, .icon-social-tumblr, .icon-social-twitter, .icon-social-viddler, .icon-social-virb, .icon-social-wordpress, .icon-social-yahoo, .icon-social-yelp, .icon-social-youtube, .icon-social-zerply, .icon-social-vimeo {
+.icon-social-kippt {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -37,123 +37,6 @@ you can use the generic selector below, but it's slower:
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 }
-.icon-social-500px:before {
-	content: "\21";
-}
-.icon-social-addthis:before {
-	content: "\22";
-}
-.icon-social-bebo:before {
-	content: "\23";
-}
-.icon-social-behance:before {
-	content: "\24";
-}
-.icon-social-blogger:before {
-	content: "\25";
-}
-.icon-social-deviantart:before {
-	content: "\26";
-}
-.icon-social-digg:before {
-	content: "\27";
-}
-.icon-social-dribbble:before {
-	content: "\28";
-}
-.icon-social-email:before {
-	content: "\29";
-}
-.icon-social-envato:before {
-	content: "\2a";
-}
-.icon-social-evernote:before {
-	content: "\2b";
-}
-.icon-social-facebook:before {
-	content: "\2c";
-}
-.icon-social-flickr:before {
-	content: "\2d";
-}
-.icon-social-forrst:before {
-	content: "\2e";
-}
-.icon-social-github:before {
-	content: "\2f";
-}
-.icon-social-google-plus:before {
-	content: "\30";
-}
-.icon-social-grooveshark:before {
-	content: "\31";
-}
 .icon-social-kippt:before {
-	content: "\32";
-}
-.icon-social-last-fm:before {
-	content: "\33";
-}
-.icon-social-linkedin:before {
-	content: "\34";
-}
-.icon-social-myspace:before {
-	content: "\35";
-}
-.icon-social-paypal:before {
-	content: "\36";
-}
-.icon-social-pencode:before {
-	content: "\37";
-}
-.icon-social-photobucket:before {
-	content: "\38";
-}
-.icon-social-pinterest:before {
-	content: "\39";
-}
-.icon-social-quora:before {
-	content: "\3a";
-}
-.icon-social-sharethis:before {
-	content: "\3b";
-}
-.icon-social-skype:before {
-	content: "\3c";
-}
-.icon-social-soundcloud:before {
-	content: "\3d";
-}
-.icon-social-stumbleupon:before {
-	content: "\3e";
-}
-.icon-social-tumblr:before {
-	content: "\3f";
-}
-.icon-social-twitter:before {
-	content: "\40";
-}
-.icon-social-viddler:before {
-	content: "\41";
-}
-.icon-social-virb:before {
-	content: "\42";
-}
-.icon-social-wordpress:before {
-	content: "\43";
-}
-.icon-social-yahoo:before {
-	content: "\44";
-}
-.icon-social-yelp:before {
-	content: "\45";
-}
-.icon-social-youtube:before {
-	content: "\46";
-}
-.icon-social-zerply:before {
-	content: "\47";
-}
-.icon-social-vimeo:before {
-	content: "\48";
+	content: "\21";
 }
