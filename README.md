@@ -13,3 +13,7 @@ WP-Bright-Theme
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
+
+# Documentation
+
+[Wiki](https://github.com/janikvonrotz/WP-Bright-Theme/wiki)
