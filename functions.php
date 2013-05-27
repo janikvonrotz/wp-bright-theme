@@ -1,4 +1,5 @@
 <?php
+/*
 # Title: Bright functions and definitions
 
 # File name: functions.php
@@ -12,6 +13,7 @@
 # Create Date: 2013-05-17
 # Last Edit Date: 2013-05-17
 # Version: 1.0.0
+*/
 
 // set content width
 if ( ! isset( $content_width ) )

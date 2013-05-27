@@ -1,4 +1,5 @@
 <?php
+/*
 # Title: The Header for this theme
 
 # File name: header.php
@@ -12,6 +13,7 @@
 # Create Date: 2013-05-17
 # Last Edit Date: 2013-05-17
 # Version: 1.0.0
+*/
 
 ?><!DOCTYPE html>
 <head>

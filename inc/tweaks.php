@@ -1,4 +1,5 @@
 <?php
+/*
 # Title: Custom functions that act independently of the theme templates
 
 # File name: header.php
@@ -12,7 +13,8 @@
 # Create Date: 2013-05-17
 # Last Edit Date: 2013-05-17
 # Version: 1.0.0
- 
+*/
+
 // Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
 function bright_page_menu_args( $args ) {
     $args['show_home'] = true;
@@ -44,8 +46,3 @@ function bright_enhanced_image_navigation( $url, $id ) {
     return $url;
 }
 add_filter( 'attachment_link', 'bright_enhanced_image_navigation', 10, 2 );
-
-
-#--------------------------------------------------#
-# menu customizing
-#--------------------------------------------------#
