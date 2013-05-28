@@ -5,20 +5,11 @@
 */
 
 /* https://kuler.adobe.com/#themeID/2388074 */
-
 @HeaderColor: #121212;
 @DefaultColor: #777777;
 @LinkHoverColor: #121212;
 @BackgroundColor: #fff;
 @BorderColor: #E6E6E6; 
-
-/* https://kuler.adobe.com/#themeID/2291686 */
-
-/* @HeaderColor: #3E454C;
-@DefaultColor: #777777;
-@LinkHoverColor: #2185C5;
-@BackgroundColor: #FFF6E5;
-@BorderColor: #FF7F66; */
 
 @BorderType: solid;
 @FontFamily: 'Cabin',"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -110,19 +101,18 @@ nav{
 }
 
 /* reset margin space */
-nav ul.nav{
+nav>ul{
 	margin:0;
 }
 
 /* reset backgroundcolor */
-nav ul.nav a, nav ul.nav a:hover{
+nav>ul a, nav>ul a:hover{
 	display: block;
 	padding:@MenuSpace;
 	background-color: @BackgroundColor;
 } 
 
 /* show menu */
-
 nav ul li.active ul {
     display: block;
 }

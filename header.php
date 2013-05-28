@@ -57,11 +57,10 @@
  
 <body <?php body_class(); ?>>
 
-<div id="page" class="container hfeed">
+<div id="page" class="hfeed site container">
 
-	<header>
-	<div id="masthead" class="site-header header" role="banner">
-		
+	<header id="masthead" class="site-header" role="banner">
+			
 		<div class="row-fluid">		
 			<div class="span12 pagination-centered logo">
 			
@@ -97,10 +96,9 @@
 				</nav>			
 			</div>			
 		</div>
-	
-	</div>
+		
 	</header>
 	
 <div class="overlay hide"></div>
 
-<div id="main" class="content site-main">
+<div id="main" class="site-main">
