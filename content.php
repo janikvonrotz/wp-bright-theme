@@ -48,14 +48,14 @@ semantic classes with post_class()
 	
 		<!-- post content -->
 		<div class="entry-content">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">→</span>', 'bright' ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'bright' ), 'after' => '</div>' ) ); ?>
+			<?php the_content( __( '<i class="meta-nav icon-arrow-right-light"></i> Continue reading', 'bright' ) ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links"><p>' . __( '<i class="icon-documents"></i> Pages:', 'bright' ), 'after' => '</p></div>' ) ); ?>
 		</div>
 	
 	<?php endif; ?>
 	
 	<!-- Show the post's tags, categories, and a comment link -->
-	<footer class="entry-meta">
+	<footer class="entry-meta"><p>
 		
 		<!-- Hide category and tag text for Pages in Search results  -->
 		<?php if ( 'post' == get_post_type() ) : //?>
@@ -67,7 +67,7 @@ semantic classes with post_class()
 			if ( $categories_list && bright_categorized_blog() ) : ?>
 			
 				<span class="cat-links">
-					<?php printf( __( 'Posted in %1$s', 'bright' ), $categories_list ); ?>
+					<?php printf( __( '<i class="icon-mailbox"></i> %1$s', 'bright' ), $categories_list ); ?>
 				</span>
 		
 			<!-- End if categories  -->
@@ -76,12 +76,10 @@ semantic classes with post_class()
 			<!-- translators: used between list items, there is a space after the comma  -->
 			<?php			
 			$tags_list = get_the_tag_list( '', __( ', ', 'bright' ) );
-			if ( $tags_list ) :
-			?>
+			if ( $tags_list ) :	?>
 			
-				<span class="sep"> | </span>
 				<span class="tag-links">
-				<?php printf( __( 'Tagged %1$s', 'bright' ), $tags_list ); ?>					
+				<?php printf( __( '<i class="icon-paperclip"></i> %1$s', 'bright' ), $tags_list ); ?>					
 				</span>
 			
 			<!-- End if $tags_list  -->
@@ -97,8 +95,8 @@ semantic classes with post_class()
 		
 		<?php endif; ?>
 
-		<?php edit_post_link( __( 'Edit', 'bright' ), '<span class="sep"> |   </span><span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( ' Edit', 'bright' ), '<span class="edit-link"><i class="icon-three-points"></i>', '</span>' ); ?>
 	
-	</footer>
+	</p></footer>
 
 </article>

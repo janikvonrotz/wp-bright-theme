@@ -63,7 +63,7 @@ endif; // bright_setup
 add_action( 'after_setup_theme', 'bright_setup' );
 
 #--------------------------------------------------#
-# Enqueue scripts and styles
+# enqueue scripts and styles
 #--------------------------------------------------#
 function bright_scripts() {
 
@@ -148,13 +148,13 @@ function bright_styles() {
 	'all' );
 	wp_enqueue_style( 'Metrize_Icons' );
 	
-	// metro-social
-	wp_register_style( 'metro-social', 
-	get_template_directory_uri() . '/components/WebProject-Resources/icons/metro-social/style.css', 
+	// metro
+	wp_register_style( 'metro', 
+	get_template_directory_uri() . '/components/WebProject-Resources/icons/metro/style.css', 
 	array(), 
 	'20130516', 
 	'all' );
-	wp_enqueue_style( 'metro-social' );
+	wp_enqueue_style( 'metro' );
 
 	// google font
 	wp_register_style( 'google-font', 
