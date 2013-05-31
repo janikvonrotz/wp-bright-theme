@@ -18,7 +18,7 @@
 @PageSpace: 1.5em;
 @MenuSpace: 0.312em;
 @FontSize: 1em;
-@IconSize: 1.5em;
+@IconSize: 22px;
 
 /*
 #--------------------------------------------------#
@@ -171,10 +171,10 @@ nav ul ul {
 	background-image:none;
 	display: inline;
 	margin-top: 0px;
-	vertical-align: text-bottom;
+	/*vertical-align: text-bottom;*/
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"]:before, [class*=" icon-"]:before {
 	font-size: @IconSize;
 }
 

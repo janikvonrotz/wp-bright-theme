@@ -1,6 +1,6 @@
 <?php
 /*
-# Title: 
+# Title: Content Aside Template
 
 # File name: content-aside.php
 # Description: The template for displaying posts in the Aside post format
