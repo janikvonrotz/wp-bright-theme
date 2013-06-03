@@ -11,3 +11,183 @@ Tags: light, white, one-column, flexible-width, custom-backgroud, custom-header,
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+/*
+#--------------------------------------------------#
+# settings
+#--------------------------------------------------#
+*/
+/* https://kuler.adobe.com/#themeID/2388074 */
+/*
+#--------------------------------------------------#
+# bootstrap
+#--------------------------------------------------#
+*/
+/* 
+row  thumbnail margin fix
+https://github.com/twitter/bootstrap/issues/3494 
+*/
+.row-fluid ul.thumbnails li.span12 + li {
+  margin-left: 0px;
+  clear: left;
+}
+.row-fluid ul.thumbnails li.span6:nth-child(2n + 3) {
+  margin-left: 0px;
+  clear: left;
+}
+.row-fluid ul.thumbnails li.span4:nth-child(3n + 4) {
+  margin-left: 0px;
+  clear: left;
+}
+.row-fluid ul.thumbnails li.span3:nth-child(4n + 5) {
+  margin-left: 0px;
+  clear: left;
+}
+.row-fluid ul.thumbnails li.span2:nth-child(6n + 7) {
+  margin-left: 0px;
+  clear: left;
+}
+.row-fluid ul.thumbnails li.span1:nth-child(12n + 13) {
+  margin-left: 0px;
+  clear: left;
+}
+/*
+#--------------------------------------------------#
+# template
+#--------------------------------------------------#
+*/
+body {
+  font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  background-color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #121212;
+}
+body,
+body a {
+  color: #777777;
+  text-decoration: none;
+}
+body a:hover,
+body a:focus {
+  color: #121212;
+  text-decoration: none;
+}
+.logo {
+  padding-top: 1.5em;
+}
+.page-header {
+  border-bottom: solid 0.0625em #e6e6e6;
+}
+.container {
+  padding-bottom: 1.5em;
+}
+/*
+#--------------------------------------------------#
+# navigation
+#--------------------------------------------------#
+*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color:rgba(0, 0, 0, 0.5); */
+
+  z-index: 1;
+  display: none;
+}
+nav {
+  border-bottom: solid 0.0625em #e6e6e6;
+  padding-bottom: 1.5em;
+  position: relative;
+  z-index: 2;
+}
+/* reset margin space */
+nav ul.nav {
+  margin: 0;
+}
+/* reset backgroundcolor */
+nav ul.nav a,
+nav ul.nav a:hover {
+  display: block;
+  padding: 0.312em;
+  background-color: #ffffff;
+}
+/* show menu */
+nav ul li.active ul {
+  display: block;
+}
+nav ul ul {
+  position: absolute;
+}
+/*
+#--------------------------------------------------#
+# navigation phone
+#--------------------------------------------------#
+*/
+.phone nav > ul {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  max-width: 150px;
+}
+.phone nav ul li {
+  display: block;
+}
+.phone nav ul ul {
+  position: relative;
+}
+.phone nav ul li.active {
+  border: solid 0.0625em #e6e6e6;
+}
+/*
+#--------------------------------------------------#
+# thumbnails
+#--------------------------------------------------#
+*/
+.thumbnail {
+  border: none;
+  border-radius: 0;
+  box-shadow: 0;
+  padding: 0;
+}
+/*
+#--------------------------------------------------#
+# metrize icons
+#--------------------------------------------------#
+*/
+/* reset */
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: none;
+  display: inline;
+  margin-top: 0px;
+  /*vertical-align: text-bottom;*/
+
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-size: 22px;
+}
+nav [class^="icon-"],
+[class*=" icon-"] {
+  padding-right: 0.312em;
+}
+/*
+#--------------------------------------------------#
+# jquery iosslider
+#--------------------------------------------------#
+*/
+/*
+#--------------------------------------------------#
+# fancybox
+#--------------------------------------------------#
+*/

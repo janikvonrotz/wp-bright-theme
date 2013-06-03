@@ -15,7 +15,7 @@ It contains my personal most used fonts, icons and javascript libraries which ar
 # icons
 
 * [Metrize_Icons](http://www.alessioatzeni.com/metrize-icons/)
-* metro-social (extended version of the social icons from Metrize_Icons)
+* metro (extended version of the social icons from Metrize_Icons)
 
 # javascript
 

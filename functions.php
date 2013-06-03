@@ -164,9 +164,17 @@ function bright_styles() {
 	'all' );
 	wp_enqueue_style( 'google-font' );
 
+	// WebProject-Resources
+	wp_register_style( 'WebProject-Resources', 
+	get_template_directory_uri() . '/components/WebProject-Resources/css/BrandColors/style.css', 
+	array(), 
+	'20130516', 
+	'all' );
+	wp_enqueue_style( 'WebProject-Resources' );
+	
 	// custom
 	wp_register_style( 'custom', 
-	get_template_directory_uri() . '/styles.css', 
+	get_template_directory_uri() . '/style.css', 
 	array(), 
 	'20130516', 
 	'all' );
