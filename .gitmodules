@@ -1,0 +1,3 @@
+[submodule "WebProject-Resources"]
+	path = WebProject-Resources
+	url = https://github.com/janikvonrotz/WebProject-Resources.git

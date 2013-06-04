@@ -1,37 +1,32 @@
-/* open dropdown navigation on touch devices */
-$('.touch nav').on('click','ul.nav>li:not(.active)',function(event){
-	if($(this).find('ul').length > 0){
-		event.preventDefault();
-		$('.overlay').show();
-		$(this).siblings().removeClass('active');
-		$(this).addClass('active');	
-	}else{
-		$(this).siblings().removeClass('active');
-		$('.overlay').hide();
-	}
-});
+/**
+ * navigation.js
+ *
+ * Handles toggling the navigation menu for small screens.
+ */
+( function() {
+	var container = document.getElementById( 'site-navigation' ),
+	    button    = container.getElementsByTagName( 'h1' )[0],
+	    menu      = container.getElementsByTagName( 'ul' )[0];
 
-/* open dropdown navigation on non touch devices */
-$('.no-touch nav').on('mouseenter','ul.nav>li:not(.active)',function(event){
-	if($(this).find('ul').length > 0){
-		event.preventDefault();
-		$('.overlay').show();
-		$(this).siblings().removeClass('active');
-		$(this).addClass('active');	
-	}else{
-		$(this).siblings().removeClass('active');
-		$('.overlay').hide();
-	}
-});
+	if ( undefined == button || undefined == menu )
+		return false;
 
-/* close dropdown menu on click outside navigation */
-$('.overlay').on('click',function(event){
-	$('nav ul li').removeClass('active');
-	$('.overlay').hide();
-});
+	button.onclick = function() {
+		if ( -1 == menu.className.indexOf( 'nav-menu' ) )
+			menu.className = 'nav-menu';
 
-/* button to show or hide menu on phone view */
-$('nav .menu').on('click', function(event){
-	$('.phone nav>ul').toggleClass('hidden-phone');
-});
+		if ( -1 != button.className.indexOf( 'toggled-on' ) ) {
+			button.className = button.className.replace( ' toggled-on', '' );
+			menu.className = menu.className.replace( ' toggled-on', '' );
+			container.className = container.className.replace( 'main-small-navigation', 'navigation-main' );
+		} else {
+			button.className += ' toggled-on';
+			menu.className += ' toggled-on';
+			container.className = container.className.replace( 'navigation-main', 'main-small-navigation' );
+		}
+	};
 
+	// Hide menu toggle button if menu is empty.
+	if ( ! menu.childNodes.length )
+		button.style.display = 'none';
+} )();
