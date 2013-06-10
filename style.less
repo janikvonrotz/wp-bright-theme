@@ -20,10 +20,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* https://kuler.adobe.com/#themeID/2388074 */
 @HeaderColor: #121212;
+@LinkColor: #121212;
+@LinkBackgroundColor: #FFFF00;
 @DefaultColor: #777777;
-@LinkHoverColor: #121212;
+/* @LinkHoverColor: #121212; */
 @BackgroundColor: #fff;
-@BorderColor: #E6E6E6; 
+@BorderColor: #E6E6E6;
+
 
 @BorderType: solid;
 @FontFamily: 'Cabin',"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -68,13 +71,16 @@ h1,h2,h3,h4,h5,h6{
 	color:@HeaderColor;
 }
 
-body, body a {
+body{
 	color: @DefaultColor;
 	text-decoration: none;
 }
-
+body a {
+	color: @LinkColor;
+}
 body a:hover, body a:focus{
-	color: @LinkHoverColor;
+	background-color: @LinkBackgroundColor;
+	color: @LinkColor;
 	text-decoration: none;
 }
 
@@ -120,11 +126,17 @@ nav ul.nav{
 }
 
 /* reset backgroundcolor */
-nav ul.nav a, nav ul.nav a:hover{
+nav ul.nav a{
 	display: block;
 	padding:@MenuSpace;
+	color: @DefaultColor;
 	background-color: @BackgroundColor;
 } 
+nav ul.nav a:hover{
+	color: @LinkColor;
+	background-color: @BackgroundColor;
+} 
+
 
 /* show menu */
 nav ul li.active ul {

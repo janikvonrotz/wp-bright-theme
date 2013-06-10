@@ -1,32 +1,37 @@
-/**
- * navigation.js
- *
- * Handles toggling the navigation menu for small screens.
- */
-( function() {
-	var container = document.getElementById( 'site-navigation' ),
-	    button    = container.getElementsByTagName( 'h1' )[0],
-	    menu      = container.getElementsByTagName( 'ul' )[0];
+/* open dropdown navigation on touch devices */
+jQuery('.touch nav').on('click','ul.nav>li:not(.active)',function(event){
+	if(jQuery(this).find('ul').length > 0){
+		event.preventDefault();
+		jQuery('.overlay').show();
+		jQuery(this).siblings().removeClass('active');
+		jQuery(this).addClass('active');	
+	}else{
+		jQuery(this).siblings().removeClass('active');
+		jQuery('.overlay').hide();
+	}
+});
 
-	if ( undefined == button || undefined == menu )
-		return false;
+/* open dropdown navigation on non touch devices */
+jQuery('.no-touch nav').on('mouseenter','ul.nav>li:not(.active)',function(event){
+	if(jQuery(this).find('ul').length > 0){
+		event.preventDefault();
+		jQuery('.overlay').show();
+		jQuery(this).siblings().removeClass('active');
+		jQuery(this).addClass('active');	
+	}else{
+		jQuery(this).siblings().removeClass('active');
+		jQuery('.overlay').hide();
+	}
+});
 
-	button.onclick = function() {
-		if ( -1 == menu.className.indexOf( 'nav-menu' ) )
-			menu.className = 'nav-menu';
+/* close dropdown menu on click outside navigation */
+jQuery('.overlay').on('click',function(event){
+	jQuery('nav ul li').removeClass('active');
+	jQuery('.overlay').hide();
+});
 
-		if ( -1 != button.className.indexOf( 'toggled-on' ) ) {
-			button.className = button.className.replace( ' toggled-on', '' );
-			menu.className = menu.className.replace( ' toggled-on', '' );
-			container.className = container.className.replace( 'main-small-navigation', 'navigation-main' );
-		} else {
-			button.className += ' toggled-on';
-			menu.className += ' toggled-on';
-			container.className = container.className.replace( 'navigation-main', 'main-small-navigation' );
-		}
-	};
+/* button to show or hide menu on phone view */
+jQuery('nav .menu').on('click', function(event){
+	jQuery('.phone nav>ul').toggleClass('hidden-phone');
+});
 
-	// Hide menu toggle button if menu is empty.
-	if ( ! menu.childNodes.length )
-		button.style.display = 'none';
-} )();
