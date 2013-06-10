@@ -26,21 +26,37 @@
 	
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) { ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
-			</a>
+			<div class="row-fluid">
+				<div class="span12 pagination-centered logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+					</a>
+				</div>	
+			</div>
 		<?php } // if ( ! empty( $header_image ) ) ?>
-	
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		
+		<div class="row-fluid">
+			<div class="site-branding span12 pagination-centered page-header">
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-description"><small><?php bloginfo( 'description' ); ?></small></h1>
+			</div>
 		</div>
-
-		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'bright' ); ?></h1>
+		
+		<nav id="site-navigation" class="navigation-main span12 pagination-centered" role="navigation">
+			
+			<p class="visible-phone menu"><span class="icon-grid-big"></span></p>
+			
+			<?php /*
+			<h1 class="menu-toggle"><?php _e( 'Menu', 'bright' ); ?></h1> 			
 			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'bright' ); ?>"><?php _e( 'Skip to content', 'bright' ); ?></a></div>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			*/ ?>
+			
+			<?php wp_nav_menu( array( 
+				'theme_location' => 'primary', 
+				'items_wrap' => ' <ul id="%1$s" class="hidden-phone inline nav %2$s">%3$s</ul>',
+				'walker' => new bright_walker_nav_menu()
+			) ); ?>
+			
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

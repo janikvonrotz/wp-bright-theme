@@ -34,4 +34,3 @@ jQuery('.overlay').on('click',function(event){
 jQuery('nav .menu').on('click', function(event){
 	jQuery('.phone nav>ul').toggleClass('hidden-phone');
 });
-
