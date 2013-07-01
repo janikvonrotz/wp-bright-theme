@@ -42,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #121212;
+  color: #2185c5;
   font-family: 'ralewaythin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   word-wrap: break-word;
 }
@@ -53,12 +53,12 @@ p.form-allowed-tags > code {
   white-space: normal;
 }
 a {
-  color: #121212;
+  color: #2185c5;
 }
 a:hover,
 a:focus {
-  background-color: #ffff00;
-  color: #121212;
+  background-color: #7ecefd;
+  color: #3e454c;
   text-decoration: none;
 }
 /* entry meta */
@@ -97,7 +97,7 @@ a:focus {
 }
 /*
 #--------------------------------------------------#
-# page header
+# header
 #--------------------------------------------------#
 */
 #masthead {
@@ -111,7 +111,7 @@ a:focus {
 }
 /*
 #--------------------------------------------------#
-# page header navigation
+# navigation
 #--------------------------------------------------#
 */
 /* overlay element to close dropdown */
@@ -143,7 +143,7 @@ nav ul.nav a {
   background-color: #ffffff;
 }
 nav ul.nav a:hover {
-  color: #121212;
+  color: #2185c5;
   background-color: #ffffff;
 }
 /* show menu */
@@ -155,7 +155,7 @@ nav ul ul {
 }
 /*
 #--------------------------------------------------#
-# page header navigation mobile
+# navigation mobile
 #--------------------------------------------------#
 */
 .phone nav > ul {
@@ -189,8 +189,7 @@ article footer,
 article header,
 article .entry-content,
 article .comment-content,
-article .entry-summary,
-.attachment {
+article .entry-summary {
   padding-bottom: 1.5em;
 }
 /* image alignment */
@@ -211,7 +210,30 @@ article .entry-summary,
 }
 /*
 #--------------------------------------------------#
-# font icons
+# widget, sidebar
+#--------------------------------------------------#
+*/
+#secondary {
+  margin-bottom: 1.5em;
+}
+.widget {
+  border-bottom: solid 0.0625em #e6e6e6;
+}
+/*
+#--------------------------------------------------#
+# comments
+#--------------------------------------------------#
+*/
+#comments {
+  margin-bottom: 1.5em;
+  border-bottom: solid 0.0625em #e6e6e6;
+}
+#comments ul.children {
+  list-style: none;
+}
+/*
+#--------------------------------------------------#
+# icons
 #--------------------------------------------------#
 */
 /* reset */

@@ -18,11 +18,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #--------------------------------------------------#
 */
 
-@HeaderColor: #121212;
-@LinkColor: #121212;
-@LinkBackgroundColor: #FFFF00;
+@HeaderColor: #2185C5;
+@LinkColor: #2185C5;
+@LinkHoverColor: #3E454C;
+@LinkBackgroundColor: #7ECEFD;
 @DefaultColor: #777777;
-@BackgroundColor: #fff;
+@BackgroundColor: #FFFFFF;
 @BorderColor: #E6E6E6;
 @BorderType: solid;
 @ContentFont: 'junctionregular','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -77,7 +78,7 @@ a {
 
 a:hover, a:focus{
 	background-color: @LinkBackgroundColor;
-	color: @LinkColor;
+	color: @LinkHoverColor;
 	text-decoration: none;
 }
 
@@ -120,7 +121,7 @@ a:hover, a:focus{
 
 /*
 #--------------------------------------------------#
-# page header
+# header
 #--------------------------------------------------#
 */
 
@@ -138,7 +139,7 @@ a:hover, a:focus{
 
 /*
 #--------------------------------------------------#
-# page header navigation
+# navigation
 #--------------------------------------------------#
 */
 
@@ -190,7 +191,7 @@ nav ul ul {
 
 /*
 #--------------------------------------------------#
-# page header navigation mobile
+# navigation mobile
 #--------------------------------------------------#
 */
 
@@ -231,8 +232,7 @@ article footer,
 article header,
 article .entry-content,
 article .comment-content,
-article .entry-summary,
-.attachment{
+article .entry-summary{
 	padding-bottom: @PageSpace;
 }
 
@@ -255,7 +255,36 @@ article .entry-summary,
 
 /*
 #--------------------------------------------------#
-# font icons
+# widget, sidebar
+#--------------------------------------------------#
+*/
+
+#secondary{
+	margin-bottom: @PageSpace;	
+}
+
+.widget{
+	border-bottom: @BorderType @BorderSize  @BorderColor;
+}
+
+/*
+#--------------------------------------------------#
+# comments
+#--------------------------------------------------#
+*/
+
+#comments{
+	margin-bottom: @PageSpace;	
+	border-bottom: @BorderType @BorderSize  @BorderColor;
+}
+
+#comments ul.children{
+	list-style: none;
+}
+
+/*
+#--------------------------------------------------#
+# icons
 #--------------------------------------------------#
 */
 

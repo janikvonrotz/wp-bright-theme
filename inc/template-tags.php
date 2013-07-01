@@ -76,17 +76,13 @@ function bright_comment( $comment, $args, $depth ) {
 			<div class="comment-content"><p>
 				<?php _e( 'Pingback:', 'bright' ); ?> <?php comment_author_link(); ?>
 			</p></div><!-- .comment-content -->
-			
-			<footer class="comment-meta row-fluid">
-			
-				<div class="comment-metadata span4">
-					<?php edit_comment_link( __( 'Edit', 'bright' ), '<span class="edit-link"><i class="icon-edit"></i> ', '</span>' ); ?>
-				</div><!-- .comment-metadata -->
-				
-			</footer>
+
+			<?php edit_comment_link( __( 'Edit', 'bright' ), '<footer class="comment-meta row-fluid"><span class="edit-link comment-metadata span4"><i class="icon-edit"></i> ', '</span><!-- .comment-metadata --></footer>' ); ?>			
 			
 		</article>
-
+	
+	</li>
+	
 	<?php else : ?>
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?>>
@@ -125,14 +121,14 @@ function bright_comment( $comment, $args, $depth ) {
 					</a>
 				</div><!-- .comment-metadata -->
 
-				<div class="comment-metadata span4">
-					<?php edit_comment_link( __( 'Edit', 'bright' ), '<span class="edit-link"><i class="icon-edit"></i> ', '</span>' ); ?>
-				</div><!-- .comment-metadata -->
+				<?php edit_comment_link( __( 'Edit', 'bright' ), '<span class="edit-link comment-metadata span4"><i class="icon-edit"></i> ', '</span><!-- .comment-metadata -->' ); ?>
 				
 			</footer>
 			
 		</article><!-- .comment-body -->
 
+	</li>
+		
 	<?php
 	endif;
 }
@@ -236,7 +232,6 @@ function bright_get_the_tag_list($tags_list){
 function bright_get_the_category_list($categories_list){
 	printf( '<span class="cat-links span4">' . __( '<i class="icon-category"></i> Posted in %1$s', 'bright' ), $categories_list . '</span>' );
 }
-
 
 /**
  * comment popup link

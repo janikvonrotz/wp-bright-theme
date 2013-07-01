@@ -16,11 +16,12 @@
 		<?php bright_wp_link_pages(); ?>
 	</div><!-- .entry-content -->
 	
+	<?php if ( is_user_logged_in() ) : ?>
 	
-	<footer class="entry-meta row-fluid">
-		
-		<?php bright_edit_post_link(); ?>
-		
-	</footer><!-- .entry-meta -->
+		<footer class="entry-meta row-fluid">			
+			<?php bright_edit_post_link(); ?>			
+		</footer><!-- .entry-meta -->
+	
+	<?php endif; // is_user_logged_in() ?>
 	
 </article><!-- #post-## -->
