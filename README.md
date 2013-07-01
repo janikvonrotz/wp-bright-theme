@@ -1,6 +1,8 @@
 WP-Bright-Theme
 ===============
 
+![Bild](screenshot.png)
+
 * Theme Name: Bright
 * Theme URI: https://github.com/janikvonrotz/WP-Bright-Theme
 * Author: Janik von Rotz
