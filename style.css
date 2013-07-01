@@ -16,51 +16,26 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # settings
 #--------------------------------------------------#
 */
-/* https://kuler.adobe.com/#themeID/2388074 */
-/* @LinkHoverColor: #121212; */
 /*
 #--------------------------------------------------#
-# bootstrap
-#--------------------------------------------------#
-*/
-/* 
-row  thumbnail margin fix
-https://github.com/twitter/bootstrap/issues/3494 
-*/
-.row-fluid ul.thumbnails li.span12 + li {
-  margin-left: 0px;
-  clear: left;
-}
-.row-fluid ul.thumbnails li.span6:nth-child(2n + 3) {
-  margin-left: 0px;
-  clear: left;
-}
-.row-fluid ul.thumbnails li.span4:nth-child(3n + 4) {
-  margin-left: 0px;
-  clear: left;
-}
-.row-fluid ul.thumbnails li.span3:nth-child(4n + 5) {
-  margin-left: 0px;
-  clear: left;
-}
-.row-fluid ul.thumbnails li.span2:nth-child(6n + 7) {
-  margin-left: 0px;
-  clear: left;
-}
-.row-fluid ul.thumbnails li.span1:nth-child(12n + 13) {
-  margin-left: 0px;
-  clear: left;
-}
-/*
-#--------------------------------------------------#
-# template
+# page
 #--------------------------------------------------#
 */
 body {
-  font-family: 'Cabin', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'junctionregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 1em;
+  text-decoration: none;
   background-color: #ffffff;
+  color: #777777;
 }
+#page {
+  padding-bottom: 1.5em;
+}
+/*
+#--------------------------------------------------#
+# content
+#--------------------------------------------------#
+*/
 h1,
 h2,
 h3,
@@ -68,19 +43,65 @@ h4,
 h5,
 h6 {
   color: #121212;
+  font-family: 'ralewaythin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  word-wrap: break-word;
 }
-body {
-  color: #777777;
-  text-decoration: none;
+p {
+  word-wrap: break-word;
 }
-body a {
+p.form-allowed-tags > code {
+  white-space: normal;
+}
+a {
   color: #121212;
 }
-body a:hover,
-body a:focus {
+a:hover,
+a:focus {
   background-color: #ffff00;
   color: #121212;
   text-decoration: none;
+}
+/* entry meta */
+.entry-meta.row-fluid .span12 {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span6:nth-child(2n + 3) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span4:nth-child(3n + 4) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span3:nth-child(4n + 5) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span2:nth-child(6n + 7) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span1:nth-child(12n + 13) {
+  margin-left: 0px;
+  clear: left;
+}
+/*
+#--------------------------------------------------#
+# navigation post
+#--------------------------------------------------#
+*/
+#nav-below {
+  margin-bottom: 1.5em;
+  border-bottom: solid 0.0625em #e6e6e6;
+}
+/*
+#--------------------------------------------------#
+# page header
+#--------------------------------------------------#
+*/
+#masthead {
+  padding-bottom: 1.5em;
 }
 .logo {
   padding-top: 1.5em;
@@ -88,30 +109,27 @@ body a:focus {
 .page-header {
   border-bottom: solid 0.0625em #e6e6e6;
 }
-.container {
-  padding-bottom: 1.5em;
-}
 /*
 #--------------------------------------------------#
-# navigation
+# page header navigation
 #--------------------------------------------------#
 */
+/* overlay element to close dropdown */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  /* background-color:rgba(0, 0, 0, 0.5); */
-
   z-index: 1;
   display: none;
 }
-nav {
+nav.navigation-main {
   border-bottom: solid 0.0625em #e6e6e6;
   padding-bottom: 1.5em;
   position: relative;
   z-index: 2;
+  text-transform: uppercase;
 }
 /* reset margin space */
 nav ul.nav {
@@ -137,7 +155,7 @@ nav ul ul {
 }
 /*
 #--------------------------------------------------#
-# navigation phone
+# page header navigation mobile
 #--------------------------------------------------#
 */
 .phone nav > ul {
@@ -158,18 +176,42 @@ nav ul ul {
 }
 /*
 #--------------------------------------------------#
-# thumbnails
+# article
 #--------------------------------------------------#
 */
-.thumbnail {
-  border: none;
-  border-radius: 0;
-  box-shadow: 0;
-  padding: 0;
+/* article layout */
+article {
+  border-bottom: solid 0.0625em #e6e6e6;
+  margin-bottom: 1.5em;
+}
+/* article element layout */
+article footer,
+article header,
+article .entry-content,
+article .comment-content,
+article .entry-summary,
+.attachment {
+  padding-bottom: 1.5em;
+}
+/* image alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
 }
 /*
 #--------------------------------------------------#
-# metrize icons
+# font icons
 #--------------------------------------------------#
 */
 /* reset */
@@ -178,24 +220,15 @@ nav ul ul {
   background-image: none;
   display: inline;
   margin-top: 0px;
-  /*vertical-align: text-bottom;*/
-
+  vertical-align: text-bottom;
 }
+/* default icon settings */
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   font-size: 22px;
 }
+/* icons in nav */
 nav [class^="icon-"],
 [class*=" icon-"] {
   padding-right: 0.312em;
 }
-/*
-#--------------------------------------------------#
-# jquery iosslider
-#--------------------------------------------------#
-*/
-/*
-#--------------------------------------------------#
-# fancybox
-#--------------------------------------------------#
-*/

@@ -42,22 +42,20 @@
 			</div>
 		</div>
 		
-		<nav id="site-navigation" class="navigation-main span12 pagination-centered" role="navigation">
-			
-			<p class="visible-phone menu"><span class="icon-grid-big"></span></p>
-			
-			<?php /*
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'bright' ); ?></h1> 			
-			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'bright' ); ?>"><?php _e( 'Skip to content', 'bright' ); ?></a></div>
-			*/ ?>
-			
-			<?php wp_nav_menu( array( 
-				'theme_location' => 'primary', 
-				'items_wrap' => ' <ul id="%1$s" class="hidden-phone inline nav %2$s">%3$s</ul>',
-				'walker' => new bright_walker_nav_menu()
-			) ); ?>
-			
-		</nav><!-- #site-navigation -->
+		<div class="row-fluid">
+			<nav id="site-navigation" class="navigation-main span12 pagination-centered" role="navigation">
+				
+				<p class="visible-phone toggle-menu"><i class="icon-block-menu"></i></p>
+								
+				<?php wp_nav_menu( array( 
+					'theme_location' => 'primary', 
+					'items_wrap' => ' <ul id="%1$s" class="hidden-phone inline nav %2$s">%3$s</ul>',
+					'walker' => new bright_walker_nav_menu()
+				) ); ?>
+				
+			</nav><!-- #site-navigation -->		
+		</div>
+		
 	</header><!-- #masthead -->
-
+	<div class="overlay hide"></div>
 	<div id="main" class="site-main">

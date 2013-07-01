@@ -121,66 +121,53 @@ add_action( 'widgets_init', 'bright_widgets_init' );
 	'20130516', 
 	'all' );
 	wp_enqueue_style( 'bootstrap-responsive' );	
-	
-	// fancybox
-	wp_register_style( 'fancybox', 
-	get_template_directory_uri() . '/components/fancybox/source/jquery.fancybox.css', 
-	array(), 
-	'20130516', 
-	'all' );
-	wp_enqueue_style( 'fancybox' );
-	
-	wp_register_style( 'fancybox-thumbs', 
-	get_template_directory_uri() . '/components/fancybox/source/helpers/jquery.fancybox-thumbs.css', 
-	array(), 
-	'20130516', 
-	'all' );
-	wp_enqueue_style( 'fancybox-thumbs' );
 		
-	// metro
-	wp_register_style( 'metro', 
-	get_template_directory_uri() . '/WebProject-Resources/icons/metro/style.css', 
+	// metro icon font
+	wp_register_style( 'icon-font-metro', 
+	get_template_directory_uri() . '/css/icon-fonts/metro/style.css', 
 	array(), 
 	'20130516', 
 	'all' );
-	wp_enqueue_style( 'metro' );
+	wp_enqueue_style( 'icon-font-metro' );
 
-	// google font
-	wp_register_style( 'google-font', 
-	'http://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,700,700italic,600italic', 
+	// header font
+	wp_register_style( 'font-raleway-thin', 
+	get_template_directory_uri() . '/css/fonts/raleway_thin/stylesheet.css', 
 	array(), 
 	'20130516', 
 	'all' );
-	wp_enqueue_style( 'google-font' );
+	wp_enqueue_style( 'font-raleway-thin' );
 
-	// BrandColors
-	wp_register_style( 'BrandColors', 
-	get_template_directory_uri() . '/WebProject-Resources/css/BrandColors/style.css', 
+	// content font
+	wp_register_style( 'font-junction', 
+	get_template_directory_uri() . '/css/fonts/junction/stylesheet.css', 
 	array(), 
 	'20130516', 
 	'all' );
-	wp_enqueue_style( 'BrandColors' );
+	wp_enqueue_style( 'font-junction' );
 	
-	// style.css
-	wp_enqueue_style( 'Bright-style', get_stylesheet_uri() );
+	// color brand
+	wp_register_style( 'color-brand', 
+	get_template_directory_uri() . '/css/colors/brand/style.css', 
+	array(), 
+	'20130516', 
+	'all' );
+	wp_enqueue_style( 'color-brand' );
+	
+	// custom style
+	wp_enqueue_style( 'bright-style', get_stylesheet_uri() );
 }
 add_action( 'wp_enqueue_scripts', 'bright_styles' );
 
 function bright_scripts() {
 
-	//wp_enqueue_script( 'Bright-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
-	//wp_enqueue_script( 'Bright-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	/*
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'Bright-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+		wp_enqueue_script( 'bright-keyboard-image-navigation', get_template_directory_uri() . '/js/bright-keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
-	*/
 	
 	// jquery
 	wp_enqueue_script( 'jquery' ); 
@@ -195,17 +182,17 @@ function bright_scripts() {
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/components/bootstrap/docs/assets/js/bootstrap.min.js', array(), false, true );    
 	
 	// hammerjs
-	wp_enqueue_script( 'hammerjs', get_template_directory_uri() . '/components/hammerjs/dist/jquery.hammer.min.js', array(), false, true );    
-	
-	// fancybox
-	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/components/fancybox/source/jquery.fancybox.pack.js', array(), false, true );    
-	wp_enqueue_script( 'fancybox-thumbs', get_template_directory_uri() . '/components/fancybox/source/helpers/jquery.fancybox-thumbs.js', array(), false, true );  
+	wp_enqueue_script( 'hammerjs', get_template_directory_uri() . '/components/hammerjs/dist/jquery.hammer.min.js', array(), false, true );   
+
+	// jquery.fitvids
+	wp_enqueue_script( 'jquery.fitvids', get_template_directory_uri() . '/components/jquery.fitvids/jquery.fitvids.min.js', array(), false, true );	
 	
 	// custom
+	wp_enqueue_script( 'Responsive', get_template_directory_uri() . '/js/Responsive.js', array(), false, true );
 	wp_enqueue_script( 'MediaQuery', get_template_directory_uri() . '/js/MediaQuery.js', array(), false, true );   
 	wp_enqueue_script( 'Navigation', get_template_directory_uri() . '/js/Navigation.js', array(), false, true );    
 	wp_enqueue_script( 'PageSwitch', get_template_directory_uri() . '/js/PageSwitch.js', array(), false, true );     
-	wp_enqueue_script( 'Gallery', get_template_directory_uri() . '/js/Gallery.js', array(), false, true );    
+
 }
 add_action( 'wp_enqueue_scripts', 'bright_scripts' );
 
@@ -276,7 +263,7 @@ class bright_walker_nav_menu extends Walker_Nav_Menu{
 		$class_names = esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ) );
 	  
 		// build html
-		$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . ' ' . $class_names . '">';
+		$output .= $indent . '<li id="nav-menu-item-'. $item->ID . '" class="' . $depth_class_names . '">';
 	  
 		// link attributes
 		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
@@ -285,7 +272,7 @@ class bright_walker_nav_menu extends Walker_Nav_Menu{
 		$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
 		$attributes .= ' class="menu-link ' . ( $depth > 0 ? 'sub-menu-link' : 'main-menu-link' ) . '"';
 	  
-		$item_output = sprintf( '%1$s<a%2$s>%3$s%4$s%5$s</a>%6$s',
+		$item_output = sprintf( '%1$s<a%2$s><i class="'.$class_names.'"></i>%3$s%4$s%5$s</a>%6$s',
 			$args->before,
 			$attributes,
 			$args->link_before,

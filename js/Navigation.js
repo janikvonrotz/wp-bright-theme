@@ -1,3 +1,8 @@
+
+/**
+ * touchable navigation
+ */
+
 /* open dropdown navigation on touch devices */
 jQuery('.touch nav').on('click','ul.nav>li:not(.active)',function(event){
 	if(jQuery(this).find('ul').length > 0){
@@ -31,6 +36,6 @@ jQuery('.overlay').on('click',function(event){
 });
 
 /* button to show or hide menu on phone view */
-jQuery('nav .menu').on('click', function(event){
-	jQuery('.phone nav>ul').toggleClass('hidden-phone');
+jQuery('nav p.toggle-menu').on('click', function(event){
+	jQuery('.phone nav>div>ul').toggleClass('hidden-phone');
 });

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="512px"
+   height="512px"
+   viewBox="0 0 512 512"
+   enable-background="new 0 0 512 512"
+   xml:space="preserve"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="social-kippt.svg"><metadata
+   id="metadata15"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs13" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1920"
+   inkscape:window-height="1138"
+   id="namedview11"
+   showgrid="false"
+   showguides="true"
+   inkscape:guide-bbox="true"
+   inkscape:zoom="0.65186406"
+   inkscape:cx="-143.38661"
+   inkscape:cy="517.26898"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<g
+   id="g3">
+	<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   d="M256,0C114.609,0,0,114.609,0,256s114.609,256,256,256s256-114.609,256-256   S397.391,0,256,0z M256,472c-119.297,0-216-96.703-216-216S136.703,40,256,40s216,96.703,216,216S375.297,472,256,472z"
+   id="path5" />
+	
+	
+</g>
+<path
+   style="fill:#000000;stroke:#000000;stroke-width:2.12969637px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="m 161.02357,398.67368 -2.45033,-269.94304 62.07465,-29.403792 -0.40837,156.411792 63.21527,-71.99914 64.60949,-2.32707 -57.58241,70.65074 61.66628,147.0189 -60.81079,0.95936 -40.57277,-103.36034 -30.52507,32.97539 1.22516,69.42559 z"
+   id="path3015"
+   inkscape:connector-curvature="0"
+   sodipodi:nodetypes="ccccccccccccc" /></svg>

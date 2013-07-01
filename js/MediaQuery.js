@@ -1,3 +1,7 @@
+/**
+ * JavaScript Media Queries
+ */
+
 /* Desktop */
 enquire.register("(min-width: 980px)", {
     match : function() {jQuery('html').removeClass('desktop tablet phone no-desktop').addClass('desktop no-tablet no-phone');},                                

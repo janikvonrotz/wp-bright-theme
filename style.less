@@ -18,19 +18,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #--------------------------------------------------#
 */
 
-/* https://kuler.adobe.com/#themeID/2388074 */
 @HeaderColor: #121212;
 @LinkColor: #121212;
 @LinkBackgroundColor: #FFFF00;
 @DefaultColor: #777777;
-/* @LinkHoverColor: #121212; */
 @BackgroundColor: #fff;
 @BorderColor: #E6E6E6;
-
-
 @BorderType: solid;
-@FontFamily: 'Cabin',"Helvetica Neue",Helvetica,Arial,sans-serif;
-
+@ContentFont: 'junctionregular','Helvetica Neue',Helvetica,Arial,sans-serif;
+@HeaderFont: 'ralewaythin','Helvetica Neue',Helvetica,Arial,sans-serif;
 @BorderSize: 0.0625em;
 @PageSpace: 1.5em;
 @MenuSpace: 0.312em;
@@ -39,49 +35,97 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*
 #--------------------------------------------------#
-# bootstrap
+# page
 #--------------------------------------------------#
 */
 
-/* 
-row  thumbnail margin fix
-https://github.com/twitter/bootstrap/issues/3494 
-*/
+body{
+	font-family: @ContentFont;
+	font-size: @FontSize;
+	text-decoration: none;
+	background-color: @BackgroundColor;
+	color: @DefaultColor;
+}
 
-.row-fluid ul.thumbnails li.span12 + li { margin-left : 0px;clear:left }
-.row-fluid ul.thumbnails li.span6:nth-child(2n + 3) { margin-left : 0px;clear:left}
-.row-fluid ul.thumbnails li.span4:nth-child(3n + 4) { margin-left : 0px;clear:left}
-.row-fluid ul.thumbnails li.span3:nth-child(4n + 5) { margin-left : 0px; clear:left}
-.row-fluid ul.thumbnails li.span2:nth-child(6n + 7) { margin-left : 0px;clear:left}
-.row-fluid ul.thumbnails li.span1:nth-child(12n + 13) { margin-left : 0px;clear:left}
+#page{
+	padding-bottom:@PageSpace;
+}
 
 /*
 #--------------------------------------------------#
-# template
+# content
 #--------------------------------------------------#
 */
 
-body{
-	font-family: @FontFamily;
-	font-size: @FontSize;
-	background-color: @BackgroundColor;
-}
-
 h1,h2,h3,h4,h5,h6{
 	color:@HeaderColor;
+	font-family: @HeaderFont;
+	word-wrap: break-word;
 }
 
-body{
-	color: @DefaultColor;
-	text-decoration: none;
+p{
+	word-wrap: break-word;
 }
-body a {
+
+p.form-allowed-tags>code{
+	white-space: normal;
+}
+
+a {
 	color: @LinkColor;
 }
-body a:hover, body a:focus{
+
+a:hover, a:focus{
 	background-color: @LinkBackgroundColor;
 	color: @LinkColor;
 	text-decoration: none;
+}
+
+/* entry meta */
+.entry-meta.row-fluid .span12 {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span6:nth-child(2n + 3) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span4:nth-child(3n + 4) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span3:nth-child(4n + 5) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span2:nth-child(6n + 7) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta.row-fluid .span1:nth-child(12n + 13) {
+  margin-left: 0px;
+  clear: left;
+}
+
+/*
+#--------------------------------------------------#
+# navigation post
+#--------------------------------------------------#
+*/
+
+#nav-below{
+	margin-bottom: @PageSpace;
+	border-bottom: @BorderType @BorderSize  @BorderColor;
+}
+
+/*
+#--------------------------------------------------#
+# page header
+#--------------------------------------------------#
+*/
+
+#masthead{
+	padding-bottom: @PageSpace;
 }
 
 .logo{
@@ -92,32 +136,29 @@ body a:hover, body a:focus{
 	border-bottom: @BorderType @BorderSize  @BorderColor;
 }
 
-.container{
-	padding-bottom:@PageSpace;
-}
-
 /*
 #--------------------------------------------------#
-# navigation
+# page header navigation
 #--------------------------------------------------#
 */
 
+/* overlay element to close dropdown */
 .overlay{
 	position:fixed;
 	top:0;
 	left:0;
 	right:0;
 	bottom:0;
-	/* background-color:rgba(0, 0, 0, 0.5); */
 	z-index:1;
 	display:none;
 }
 
-nav{
+nav.navigation-main{
 	border-bottom: @BorderType @BorderSize  @BorderColor;
 	padding-bottom: @PageSpace;	
 	position:relative;
 	z-index:2;
+	text-transform: uppercase;
 }
 
 /* reset margin space */
@@ -132,11 +173,11 @@ nav ul.nav a{
 	color: @DefaultColor;
 	background-color: @BackgroundColor;
 } 
+
 nav ul.nav a:hover{
 	color: @LinkColor;
 	background-color: @BackgroundColor;
 } 
-
 
 /* show menu */
 nav ul li.active ul {
@@ -149,7 +190,7 @@ nav ul ul {
 
 /*
 #--------------------------------------------------#
-# navigation phone
+# page header navigation mobile
 #--------------------------------------------------#
 */
 
@@ -175,20 +216,46 @@ nav ul ul {
 
 /*
 #--------------------------------------------------#
-# thumbnails
+# article
 #--------------------------------------------------#
 */
 
-.thumbnail{
-	border: none;
-	border-radius: 0;
-	box-shadow: 0;
-	padding: 0;
+/* article layout */
+article{
+	border-bottom: @BorderType @BorderSize  @BorderColor;
+	margin-bottom: @PageSpace;
+}
+
+/* article element layout */
+article footer,
+article header,
+article .entry-content,
+article .comment-content,
+article .entry-summary,
+.attachment{
+	padding-bottom: @PageSpace;
+}
+
+/* image alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
 }
 
 /*
 #--------------------------------------------------#
-# metrize icons
+# font icons
 #--------------------------------------------------#
 */
 
@@ -197,25 +264,15 @@ nav ul ul {
 	background-image:none;
 	display: inline;
 	margin-top: 0px;
-	/*vertical-align: text-bottom;*/
+	vertical-align: text-bottom;
 }
 
+/* default icon settings */
 [class^="icon-"]:before, [class*=" icon-"]:before {
 	font-size: @IconSize;
 }
 
+/* icons in nav */
 nav [class^="icon-"], [class*=" icon-"]{
 	padding-right: @MenuSpace;
 }
-
-/*
-#--------------------------------------------------#
-# jquery iosslider
-#--------------------------------------------------#
-*/
-
-/*
-#--------------------------------------------------#
-# fancybox
-#--------------------------------------------------#
-*/

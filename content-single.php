@@ -8,56 +8,50 @@
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<div class="entry-meta">
+		<div class="entry-meta row-fluid">
 			<?php bright_posted_on(); ?>
+			<?php bright_posted_by(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'bright' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<?php bright_wp_link_pages(); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-meta">
-		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'bright' ) );
+	<footer class="entry-meta row-fluid">
+	
+		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$categories_list = get_the_category_list( __( ' ', 'bright' ) );
+				if ( $categories_list && bright_categorized_blog() ) :
+			?>
+			
+			<?php bright_get_the_category_list($categories_list); ?>		
+			
+			<?php endif; // End if categories ?>
 
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'bright' ) );
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( '', __( ' ', 'bright' ) );
+				if ( $tags_list ) :
+			?>			
 
-			if ( ! bright_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'bright' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'bright' );
-				}
+			<?php  bright_get_the_tag_list($tags_list); ?>
+		
+			<?php endif; // End if $tags_list ?>
+			
+		<?php endif; // End if 'post' == get_post_type() ?>
 
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'bright' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'bright' );
-				}
-
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink(),
-				the_title_attribute( 'echo=0' )
-			);
-		?>
-
-		<?php edit_post_link( __( 'Edit', 'bright' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+			
+			<?php bright_comments_popup_link(); ?>
+			
+		<?php endif; ?>
+		
+		<?php bright_edit_post_link(); ?>
+				
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

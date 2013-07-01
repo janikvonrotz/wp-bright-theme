@@ -1,0 +1,17 @@
+{
+  "name": "WP-Bright-Theme",
+  "version": "1.0.0",
+  "dependencies": {
+    "enquire": "~2.0.2",
+    "jquery": "~2.0.2",
+    "bootstrap": "~2.3.2",
+    "hammerjs": "~1.0.5",
+    "jquery.fitvids": "~1.0.2",
+    "modernizr": "~2.6.2"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}

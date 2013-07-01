@@ -13,12 +13,14 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'bright' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<?php bright_wp_link_pages(); ?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'bright' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	
+	
+	<footer class="entry-meta row-fluid">
+		
+		<?php bright_edit_post_link(); ?>
+		
+	</footer><!-- .entry-meta -->
+	
 </article><!-- #post-## -->
