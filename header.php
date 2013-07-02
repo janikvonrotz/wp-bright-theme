@@ -16,6 +16,23 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
+<script>
+/**
+ * IEMobile responsive fix
+ */
+
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement("style");
+    msViewportStyle.appendChild(
+        document.createTextNode(
+            "@-ms-viewport{width:auto!important}"
+        )
+    );
+    document.getElementsByTagName("head")[0].
+        appendChild(msViewportStyle);
+}
+</script>
+
 <?php wp_head(); ?>
 </head>
 
