@@ -1,0 +1,42 @@
+<h1>Introducing FitVids.js</h1>
+<p>A lightweight, easy-to-use jQuery plugin for fluid width video embeds.</p>
+<p>FitVids automates <a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/">the Intrinsic Ratio Method by Thierry Koblentz</a> to achieve fluid width videos in your responsive web design.</p>
+<h2>How Do I Use It?</h2>
+<p>Include jQuery 1.7+ and FitVids.js in your layout and target your videos container with <code>fitVids()</code>.</p>
+<pre><code class="lang-html">&lt;script src=&quot;path/to/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;path/to/jquery.fitvids.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $(&quot;#thing-with-videos&quot;).fitVids();
+  });
+&lt;/script&gt;</code></pre>
+<p>This will wrap each video in a <code>div.fluid-width-video-wrapper</code> and apply the necessary CSS. After the initial Javascript call, it&#39;s all percentage-based CSS magic.</p>
+<h2>Currently Supported Players</h2>
+<table>
+<tr><td>YouTube</td><td>Y</td></tr>
+<tr><td>Vimeo</td><td>Y</td></tr>
+<tr><td>Blip.tv</td><td>Y</td></tr>
+<tr><td>Viddler</td><td>Y</td></tr>
+<tr><td>Kickstarter</td><td> Y</td></tr>
+</table>
+
+<h2>Add Your Own Video Vendor</h2>
+<p>Have a custom video player? We now have a <code>customSelector</code> option where you can add your own specific video vendor selector (<em>mileage may vary depending on vendor and fluidity of player</em>):</p>
+<pre><code class="lang-javascript">  $(&quot;#thing-with-videos&quot;).fitVids({ customSelector: &quot;iframe[src^=&#39;http://mycoolvideosite.com&#39;], iframe[src^=&#39;http://myviiids.com&#39;]&quot;});
+  // Selectors are comma separated, just like CSS</code></pre>
+<p><em>Note:</em> This will be the quickest way to add your own custom vendor as well as test your player&#39;s compatibility with FitVids.</p>
+<h2>Changelog</h2>
+<ul>
+<li><em>09.02.11 - v1 - 2.376kb</em><ul>
+<li>Added <code>customSelector</code> option</li>
+</ul>
+</li>
+<li><em>09.02.11 - v1 - 2.135kb</em><ul>
+<li>Initial release</li>
+<li>Vimeo,YouTube, Blip.tv, Viddler, Kickstarter</li>
+</ul>
+</li>
+</ul>
+<h2>Credits</h2>
+<p>@ChrisCoyier, @davatron5000, @TrentWalton, @raygunray</p>

@@ -254,3 +254,12 @@ nav [class^="icon-"],
 [class*=" icon-"] {
   padding-right: 0.312em;
 }
+/*
+#--------------------------------------------------#
+# plugins
+#--------------------------------------------------#
+*/
+/* jetpack */
+#infinite-handle {
+  display: none;
+}

@@ -105,7 +105,7 @@ add_action( 'widgets_init', 'bright_widgets_init' );
 /**
  * Enqueue scripts and styles
  */
- function bright_styles() {
+ function bright_styles(){	
  
 	// bootstrap
 	wp_register_style( 'bootstrap', 
@@ -113,15 +113,14 @@ add_action( 'widgets_init', 'bright_widgets_init' );
 	array(), 
 	'20130516', 
 	'all' );
-	wp_enqueue_style( 'bootstrap' );
-	
+	wp_enqueue_style( 'bootstrap' );	
 	wp_register_style( 'bootstrap-responsive', 
 	get_template_directory_uri() . '/components/bootstrap/docs/assets/css/bootstrap-responsive.css', 
 	array(), 
 	'20130516', 
 	'all' );
-	wp_enqueue_style( 'bootstrap-responsive' );	
-		
+	wp_enqueue_style( 'bootstrap-responsive' );
+	
 	// metro icon font
 	wp_register_style( 'icon-font-metro', 
 	get_template_directory_uri() . '/css/icon-fonts/metro/style.css', 
@@ -153,7 +152,7 @@ add_action( 'widgets_init', 'bright_widgets_init' );
 	'20130516', 
 	'all' );
 	wp_enqueue_style( 'color-brand' );
-	
+ 
 	// custom style
 	wp_enqueue_style( 'bright-style', get_stylesheet_uri() );
 }
