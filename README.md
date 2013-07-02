@@ -1,7 +1,12 @@
-WP-Bright-Theme
-===============
+# WP-Bright-Theme
+
+## [Demo](http://janikvonrotz.ch/wp-bright-theme)
+
+## Screenshot
 
 ![Bild](screenshot.png)
+
+## Details
 
 * Theme Name: Bright
 * Theme URI: https://github.com/janikvonrotz/WP-Bright-Theme
@@ -16,6 +21,6 @@ WP-Bright-Theme
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-# Documentation
+## Documentation
 
 [Wiki](https://github.com/janikvonrotz/WP-Bright-Theme/wiki)
