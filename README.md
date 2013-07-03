@@ -1,6 +1,6 @@
 # WP-Bright-Theme
 
-## [Demo](http://janikvonrotz.ch/wp-bright-theme)
+## [Demo](http://janikvonrotz.ch)
 
 ## Screenshot
 
