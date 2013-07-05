@@ -6,6 +6,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+	
+		<?php the_post_thumbnail('thumbnail-banner', array('class' => 'aligncenter img-rounded'));  ?>
+	
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta row-fluid">

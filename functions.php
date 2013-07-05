@@ -39,7 +39,15 @@ function bright_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	 if ( function_exists( 'add_image_size' ) ) { 
+		add_image_size( 'thumbnail-banner', 670, 999, false ); 
+	}
+	if ( function_exists( 'add_theme_support' ) ) {
+		add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 'thumbnail-banner' ); // default Post Thumbnail dimensions   
+	}
+
+
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -86,6 +94,15 @@ function bright_register_custom_background() {
 	}
 }
 add_action( 'after_setup_theme', 'bright_register_custom_background' );
+
+/**
+ * Link all post thumbnails to the post permalink
+ */
+add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
+function my_post_image_html( $html, $post_id, $post_image_id ) {
+  $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+  return $html;
+}
 
 /**
  * Register widgetized area and update sidebar with default widgets
