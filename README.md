@@ -1,12 +1,9 @@
-# WP-Bright-Theme
+# Wordpress and Tumblr Theme: Bright
 
-## [Demo](http://janikvonrotz.ch)
+## [Demo Wordpress](http://janikvonrotz.ch)
+## [Demo Tumblr](http://tumblr.janikvonrotz.ch)
 
-## Screenshot
-
-![Bild](screenshot.png)
-
-## Details
+## Details Wordpress
 
 * Theme Name: Bright
 * Theme URI: https://github.com/janikvonrotz/WP-Bright-Theme
