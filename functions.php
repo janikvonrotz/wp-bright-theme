@@ -39,7 +39,7 @@ function bright_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	 if ( function_exists( 'add_image_size' ) ) { 
+	if ( function_exists( 'add_image_size' ) ) { 
 		add_image_size( 'thumbnail-banner', 670, 999, false ); 
 	}
 	if ( function_exists( 'add_theme_support' ) ) {

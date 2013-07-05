@@ -6,21 +6,24 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	
 
-	<header class="entry-header">
+	<header class="entry-header row-fluid">				
+		
+			<div class="alignleft">
+			<?php the_post_thumbnail('thumbnail', array('class' => 'img-circle'));  ?>
+			</div>
+		
+		<span class="clearfix visible-phone"></span>
 		
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta row-fluid">
 			<?php bright_posted_on(); ?>
-			<?php bright_posted_by(); ?>
+			<?php bright_posted_by(); ?>			
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-	
-	<?php the_post_thumbnail('thumbnail', array('class' => 'img-circle alignright'));  ?>
 	
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
