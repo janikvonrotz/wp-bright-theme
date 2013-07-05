@@ -33,9 +33,6 @@
 					appendChild(msViewportStyle);
 			}
 		</script>
-		<style type="text/css" id="custom-background-css">
-			body.custom-background { background-color: #ffffff; }
-		</style>
 		<script type="text/javascript">
 			// <![CDATA[
 				var disqus_shortname = 'janikvonrotz';
@@ -57,6 +54,22 @@
 				}());
 			//]]>
 		</script>
+		
+				<!-- DEFAULT COLORS -->
+        <meta name="color:Background" content="#fff"/>
+        <meta name="color:Text Header" content="#2185c5"/>
+        <meta name="color:Text" content="#777777"/>
+		<style type="text/css">
+			body.custom-background, nav ul.nav a, nav ul.nav a:hover{
+				background-color: {color:Background};
+			}
+            body{
+                color: {color:Text};
+            }
+			h1, h2, h3, h4, h5, h6 {
+				color: {color:Text Header};
+			}
+        </style>
 		
     </head>
     <body class="home blog custom-background">
@@ -94,7 +107,7 @@
 						<div class="menu-menu-container"> 
 							<ul id="menu-menu" class="hidden-phone inline nav menu"><li id="nav-menu-item-11" class="main-menu-item  menu-item-even menu-item-depth-0"><a href="http://janikvonrotz.ch/category/blog/" class="menu-link main-menu-link"><i class="menu-item menu-item-type-taxonomy menu-item-object-category"></i>Blog</a>
 								<ul class="sub-menu unstyled text-left hide menu-odd  menu-depth-1">
-									<li id="nav-menu-item-12" class="sub-menu-item  menu-item-odd menu-item-depth-1"><a href="http://janikvonrotz.ch/category/blog/music/" class="menu-link sub-menu-link"><i class="menu-item menu-item-type-taxonomy menu-item-object-category"></i>Music</a></li>
+									<li id="nav-menu-item-12" class="sub-menu-item  menu-item-odd menu-item-depth-1"><a href="/archive">Archive</a>	</li>
 									<li id="nav-menu-item-13" class="sub-menu-item  menu-item-odd menu-item-depth-1"><a href="http://janikvonrotz.ch/category/blog/pictures/" class="menu-link sub-menu-link"><i class="menu-item menu-item-type-taxonomy menu-item-object-category"></i>Pictures</a></li>
 									<li id="nav-menu-item-27" class="sub-menu-item  menu-item-odd menu-item-depth-1"><a href="http://janikvonrotz.ch/category/blog/development/" class="menu-link sub-menu-link"><i class="menu-item menu-item-type-taxonomy menu-item-object-category"></i>Development</a></li>
 								</ul>
@@ -235,19 +248,17 @@
 						<nav role="navigation" id="nav-below" class="navigation-paging">
 							<ul class="pager">
 								{block:PreviousPage}
-									<li class="nav-previous previous">
-										<a href="{PreviousPage}"><span class="meta-nav"><i class="icon-arrow-left-light"></i></span> Previous</a>
+									<li class="nav-next next">
+										<a href="{NextPage}">Next <span class="meta-nav"><i class="icon-arrow-right-light"></i></span></a>
 									</li>
 								{/block:PreviousPage}
 
 								{block:NextPage}
-									<li class="nav-next next">
-										<a href="{NextPage}">Next <span class="meta-nav"><i class="icon-arrow-right-light"></i></span></a>
+									<li class="nav-previous previous">
+										<a href="{PreviousPage}"><span class="meta-nav"><i class="icon-arrow-left-light"></i></span> Previous</a>
 									</li>
 								{/block:NextPage}
-							</ul>
-						
-							<a href="/archive">Archive</a>							
+							</ul>					
 						</nav>
 						
 					</div><!-- #content -->
