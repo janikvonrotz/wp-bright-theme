@@ -77,7 +77,7 @@ function bright_comment( $comment, $args, $depth ) {
 				<?php _e( 'Pingback:', 'bright' ); ?> <?php comment_author_link(); ?>
 			</p></div><!-- .comment-content -->
 
-			<?php edit_comment_link( __( 'Edit', 'bright' ), '<footer class="comment-meta row"><span class="edit-link comment-metadata span4"><i class="icon-edit"></i> ', '</span><!-- .comment-metadata --></footer>' ); ?>			
+			<?php edit_comment_link( __( 'Edit', 'bright' ), '<footer class="comment-meta row-fluid"><span class="edit-link comment-metadata span4"><i class="icon-edit"></i> ', '</span><!-- .comment-metadata --></footer>' ); ?>			
 			
 		</article>
 	
@@ -105,7 +105,7 @@ function bright_comment( $comment, $args, $depth ) {
 				<?php comment_text(); ?>
 			</div><!-- .comment-content -->
 		
-			<footer class="comment-meta row">
+			<footer class="comment-meta row-fluid">
 			
 				<div class="reply span4">					
 					<i class="icon-arrow-curve-left"></i>

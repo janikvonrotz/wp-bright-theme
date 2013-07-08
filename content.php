@@ -18,7 +18,7 @@
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta row">
+		<div class="entry-meta row-fluid">
 			<?php bright_posted_on(); ?>
 			<?php bright_posted_by(); ?>			
 		</div><!-- .entry-meta -->
@@ -36,7 +36,7 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<footer class="entry-meta row">
+	<footer class="entry-meta row-fluid">
 	
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			

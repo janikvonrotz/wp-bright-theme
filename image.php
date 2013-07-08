@@ -8,8 +8,8 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area image-attachment">
-		<div id="content" class="site-content" role="main">
+	<div id="primary" class="content-area row image-attachment">
+		<div id="content" class="site-content span7 offset1" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -17,7 +17,7 @@ get_header();
 				<header class="entry-header">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 
-					<div class="entry-meta row">
+					<div class="entry-meta  row-fluid">
 					
 						<?php bright_posted_on(); ?>
 						
@@ -104,7 +104,7 @@ get_header();
 
 				</div><!-- .entry-content -->
 
-				<footer class="entry-meta row">
+				<footer class="entry-meta row-fluid">
 				
 					<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 					
@@ -127,6 +127,9 @@ get_header();
 		<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
-	</div><!-- #primary -->
+		
+	<?php get_sidebar(); ?>
 
+</div><!-- #primary -->
+	
 <?php get_footer(); ?>
