@@ -87,9 +87,10 @@ a:focus {
   margin-left: 0px;
   clear: left;
 }
-/* wp images */
+/* wp responsive fix */
 .wp-caption,
-img {
+img,
+iframe {
   max-width: 100%!important;
 }
 /*
