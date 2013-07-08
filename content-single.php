@@ -11,7 +11,7 @@
 	
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<div class="entry-meta row-fluid">
+		<div class="entry-meta row">
 			<?php bright_posted_on(); ?>
 			<?php bright_posted_by(); ?>
 		</div><!-- .entry-meta -->
@@ -22,7 +22,7 @@
 		<?php bright_wp_link_pages(); ?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-meta row-fluid">
+	<footer class="entry-meta row">
 	
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			

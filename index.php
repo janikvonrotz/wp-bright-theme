@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area row-fluid">
+	<div id="primary" class="content-area row">
 		<div id="content" class="site-content span7 offset1" role="main">
 
 		<?php if ( have_posts() ) : ?>

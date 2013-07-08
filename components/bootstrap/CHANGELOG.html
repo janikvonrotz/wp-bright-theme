@@ -1,0 +1,357 @@
+<h2>2.3.2 (May 17, 2013)</h2>
+<ul>
+<li>Fix dropdown for firefox (middleclick) and mobile</li>
+</ul>
+<h2>2.3.1 (February 28, 2013)</h2>
+<p>Patch release for @fat&#39;s n00bery</p>
+<ul>
+<li>fix missing event type in dropdown</li>
+<li>fix delegated data-attrs for popover/tooltip</li>
+<li>make carousel actually pause when you click cycle</li>
+<li>fix jshint ref in makefile</li>
+<li>fix trying to remove backdrop when no backdrop</li>
+</ul>
+<h2>2.3.0 (February 7, 2013)</h2>
+<p>Minor release to add carousel indicators, improve tooltips, improve dev setup, and fix hella bugs.</p>
+<ul>
+<li><strong>Repository changes:</strong><ul>
+<li><strong>Local instead of global dependencies</strong> for our makefile and install process. Now getting started is way easier—just run <code>npm install</code>.</li>
+<li>Upgraded to jQuery 1.9. No changes were needed, but we did upgrade the included jQuery file to the latest release.</li>
+<li>Moved changelog to be within the repo instead of as a wiki page.</li>
+</ul>
+</li>
+<li><strong>New and improved features:</strong><ul>
+<li><strong>Added carousel indicators!</strong> Add the HTML and it automagically works.</li>
+<li><strong>Added <code>container</code> option to tooltips.</strong> The default option is still <code>insertAfter</code>, but now you may specify where to insert tooltips (and by extension, popovers) with the optional container parameter.</li>
+<li>Improved popovers now utilize <code>max-width</code> instead of <code>width</code>, have been widened from 240px to 280px, and will automatically hide the title if one has not been set via CSS <code>:empty</code> selector.</li>
+<li>Improved tooltip alignment on edges with <a href="https://github.com/twitter/bootstrap/pull/6713">#6713</a>.</li>
+<li><strong>Improved accessibility for links in all components.</strong> After merging <a href="https://github.com/twitter/bootstrap/pull/6441">#6441</a>, link hover states now apply to the <code>:focus</code> state as well. This goes for basic <code>&lt;a&gt;</code> tags, as well as buttons, navs, dropdowns, and more.</li>
+<li>Added print utility classes to show and hide content between <code>screen</code> and <code>print</code> via CSS.</li>
+<li>Updated input groups to make them behave more like default form controls. Added <code>display: inline-block;</code>, increased <code>margin-bottom</code>, and added <code>vertical-align: middle;</code>  to match <code>&lt;input&gt;</code> styles.</li>
+<li>Added <code>.horizontal-three-colors()</code> gradient mixin (with example in the CSS tests file).</li>
+<li>Added <code>.text-left</code>, <code>.text-center</code>, and <code>.text-right</code> utility classes for easy typographic alignment.</li>
+<li>Added <code>@ms-viewport</code> so IE10 can use responsive CSS when in split-screen mode.</li>
+</ul>
+</li>
+<li><strong>Docs changes:</strong><ul>
+<li>Added <a href="https://f.cloud.github.com/assets/98681/25869/5e2f812c-4afa-11e2-9293-501cd689232d.png">new justified navigation example</a>.</li>
+<li>Added sticky footer with fixed navbar example.</li>
+</ul>
+</li>
+</ul>
+<p>See more on the <a href="https://github.com/twitter/bootstrap/pull/6346">2.3.0 pull request</a>.</p>
+<h2>2.2.2 (December 8, 2012)</h2>
+<p>Bugfix release addressing docs, CSS, and some JavaScript issues. Key changes include:</p>
+<ul>
+<li><strong>Docs:</strong><ul>
+<li>Assets (illustrations and examples) are now retina-ready.</li>
+<li>Replaced <a href="http://placehold.it">Placehold.it</a> with <a href="http://imsky.github.com/holder/">Holder.js</a>, a client-side and retina-ready placeholder image tool.</li>
+</ul>
+</li>
+<li><strong>Dropdowns:</strong> Temporary fix added for dropdowns on mobile to prevent them from closing early.</li>
+<li><strong>Popovers:</strong><ul>
+<li>No longer inherits <code>font-size: 0;</code> when placed in button groups.</li>
+<li>Arrows refactored to work in IE8, and use less code.</li>
+<li>Plugin no longer inserts popover content into a <code>&lt;p&gt;</code>, but rather directly into <code>.popover-content</code>.</li>
+</ul>
+</li>
+<li><strong>Labels and badges:</strong> Now <a href="https://github.com/twitter/bootstrap/commit/ead5dbeba5cd7acfa560bfb353f5e7c4f4a19256">automatically collapse</a> if they have no content.</li>
+<li><strong>Tables:</strong> Nesting support with <code>.table-bordered</code> and <code>.table-striped</code> greatly improved.</li>
+<li><strong>Typeahead:</strong><ul>
+<li>Now <a href="https://github.com/twitter/bootstrap/commit/1747caf19d59cad7fdc90ae56a00e0e2849f95f4">inserts dropdown menu after the input</a> instead of at the close of the document.</li>
+<li>Hitting escape will place focus back on the <code>&lt;input&gt;</code>.</li>
+</ul>
+</li>
+<li>Print styles, from HTML5 Boilerplate, have been added.</li>
+</ul>
+<p>See more on the <a href="https://github.com/twitter/bootstrap/issues?milestone=17&amp;state=closed">2.2.2 milestone</a>.</p>
+<h2>2.2.1 (October 30, 2012)</h2>
+<p>Hotfix release to address the carousel bug reports.</p>
+<h2>2.2.0 (October 29, 2012)</h2>
+<h3>tl;dr</h3>
+<p>2.1.2 is now 2.2.0: four new example templates, added media component, new typographic scale, fixed that box-shadow mixin bug, fixed z-index issues, and <a href="https://github.com/twitter/bootstrap/issues?milestone=15&amp;page=1&amp;state=closed">more</a>.</p>
+<h3>Highlights</h3>
+<ul>
+<li><strong>Added four new example templates</strong> to the docs, including a narrow marketing page, sign in form, sticky footer, and a fancy carousel (created for an upcoming .net magazine article).</li>
+<li><strong>Added the media component</strong>, to create larger common components like comments, Tweets, etc.</li>
+<li><strong>New variable-driven typographic scale</strong> based on <code>@baseFontSize</code> and <code>@baseLineHeight</code>.</li>
+<li>Revamped mini, small, and large padding via new variables for inputs and buttons so everything is the same size.</li>
+<li>Reverted 2.1.1&#39;s <code>.box-shadow();</code> mixin change that caused compiler errors.</li>
+<li>Improved dropdown submenus to support dropups and left-aligned submenus.</li>
+<li>Fixed z-index issues with tooltips and popovers in modals.</li>
+<li>Hero unit now sets basic type styles for the entire component, rather than on <code>.hero-unit p { ... }</code>.</li>
+<li>Updated JavaScript plugins and docs to jQuery 1.8.1.</li>
+<li>Added Contributing.md file.</li>
+<li>Added support for installing Bootstrap via <a href="http://twitter.github.com/bower">Bower</a>.</li>
+<li>Miscellaneous variable improvements across the board.</li>
+<li>Miscellaneous documentation typos fixed.</li>
+</ul>
+<p>For the full list of issues included in this release, visit the <a href="https://github.com/twitter/bootstrap/issues?milestone=15&amp;page=1&amp;state=closed">2.2.0 milestone on GitHub</a></p>
+<h2>2.1.1 (September 4, 2012)</h2>
+<ul>
+<li>New feature: alert text. We documented these new classes, like <code>.text-success</code>, at the bottom of the <a href="http://twitter.github.com/bootstrap/base-css.html#typography">Typography section</a> along with the long undocumented <code>.muted</code>.</li>
+<li>Fixed a lot of typos in the docs. Spelling is hard.</li>
+<li>Made the <code>.box-shadow()</code> mixin more durable. It no longer requires escaping for multiple shadows, meaning you can easily use variables and functions in them once again.</li>
+<li>Widened <code>.dl-horizontal dt</code> and <code>.horizontal-form .control-group</code> to better handle the increased font-size.</li>
+<li>Dropdown submenus improved: now you only see the next level, not all levels, on hover of the submenu toggle.</li>
+<li>Clarified jQuery and Bootstrap template requirements in Getting Started section.</li>
+<li><code>select</code> now utilizes <code>@inputBorder</code>.</li>
+<li><code>.lead</code> now scales up from <code>@baseFontSize</code> instead of being a fixed font-size and line-height.</li>
+<li>Fixed the vertical three color gradient in latest Firefox.</li>
+<li>Reordered some variables that caused errors in certain Less compilers.</li>
+</ul>
+<p>View all closed issues on the <a href="https://github.com/twitter/bootstrap/issues?milestone=14&amp;state=closed">2.1.1 milestone</a>.</p>
+<h2>2.1.0 (August 20, 2012)</h2>
+<h3>Key changes</h3>
+<ul>
+<li>Submenu support on dropdowns</li>
+<li>Affix JavaScript plugin</li>
+<li>Block level buttons</li>
+<li>State classes on table rows</li>
+<li>Improved disabled states on navs and dropdowns</li>
+<li>The navbar component is now white by default, with an optional class to darken it</li>
+<li>Improved prepended and appended inputs</li>
+<li>New base font-size and line-height</li>
+<li>Added variable for navbar collapse trigger point</li>
+<li>Fluid grid offsets</li>
+<li>Fluid grid system variables are no longer fixed percentages</li>
+<li>Removed LESS docs page</li>
+</ul>
+<p>For full set of changes, see the completed milestone: <a href="https://github.com/twitter/bootstrap/issues?milestone=7&amp;page=1&amp;state=closed">https://github.com/twitter/bootstrap/issues?milestone=7&amp;page=1&amp;state=closed</a></p>
+<h2>2.0.4 (June 1, 2012)</h2>
+<h3>Docs</h3>
+<ul>
+<li>Added <code>type=&quot;button&quot;</code> to all dismiss buttons in alerts and modals  to avoid a bug in which they prevent their parent&#39;s <code>form</code> from properly submitting.</li>
+<li>Added simple documentation to Base CSS for <code>.lead</code>.</li>
+<li>Added new CSS test to illustrate how the navbar, static and fixed, behaves.</li>
+<li>Clarified grid sizing copy to include mention of responsive variations.</li>
+<li>Reformatted the LESS docs page to prevent terrible table displays at smaller grid sizes.</li>
+<li>Miscellaneous typos and tweaks.</li>
+</ul>
+<h3>CSS</h3>
+<ul>
+<li>Refactored forms.less to make our selectors more specific for fewer overrides and less code. Instead of a generic <code>input</code> selector and various resets, we target each type of input like <code>input[type=&quot;text&quot;]</code>, <code>input[type=&quot;password&quot;]</code>, etc.</li>
+<li>Form field state (e.g., success or error) now applies to checkbox and radio labels.</li>
+<li>Removed redundant CSS on <code>&lt;p&gt;</code> for <code>font-family</code>, <code>font-size</code>, and <code>line-height</code>.</li>
+<li>Removed redundant <code>color</code> declaration from the <code>&lt;label&gt;</code> element.</li>
+<li>Added variables for dropdown dividers border colors.</li>
+<li><code>legend</code> and <code>.form-actions</code> share the same <code>border-color</code>, <code>#e5e5e5</code>.</li>
+<li>Fixed some responsive issues with input-prepend and -append, notably with the fluid grid.</li>
+<li>Added special CSS to prevent <code>max-width: 100%;</code> on images from messing up Google Maps rendering.</li>
+<li>Scope opened dropdowns to only immediate children to avoid unintended cascade.</li>
+<li>Similarly, scope floated-right dropdowns to immediate children with <code>.pull-right &gt; .dropdown-menu</code>.</li>
+<li>Updated <code>.placeholder()</code> mixin to use <code>&amp;</code> operator in Less for proper output when compiling.</li>
+<li>Added <code>-ms-input-placeholder</code> to <code>.placeholder()</code> mixin.</li>
+<li>Added CSS3 hyphens mixin.</li>
+<li>Fixed a bug in IE7/8 where certain form controls would not show text if the parent had a filter opacity set.</li>
+</ul>
+<h2>2.0.3 (April 24, 2012)</h2>
+<p>Running makefile now require JSHint and Recess.</p>
+<h3>HTML and CSS</h3>
+<ul>
+<li>Overhauled the responsive utility classes to simplify required CSS, add <code>!important</code> to all declarations, and use <code>display: inherit</code> in place of <code>display: block</code> to account for different types of elements.</li>
+<li>Removed <code>&gt;</code> from fluid grid column selectors, meaning every element with a <code>.span*</code> class within a <code>.row-fluid</code> will use percentage widths instead of fixed-pixels.</li>
+<li>Fixed regression in responsive images support as of 2.0.1. We&#39;ve re-added <code>max-width: 100%;</code> to images by default. We removed it in our last release since we had folks complaining about Google Maps integration and other projects, but we&#39;re taking a different stance now on these things and will require developers to make these tweaks on their end.</li>
+<li>Added variable <code>@navbarBrandColor</code> for the brand element in navbars, which defaults to <code>@navbarLinkColor</code>.</li>
+<li>Font-family mixins now use variables for their stacks.</li>
+<li>Fixed an unescaped <code>filter</code> on the <code>.reset-filter()</code> mixin that was causing some errors depending on your compiler.</li>
+<li>Fixed regression in <code>.form-actions</code> background, which was too dark, by adding a new variable <code>@formActionsBackground</code> and changing the color to <code>#f5f5f5</code> instead of <code>#eee</code>.</li>
+<li>Fixed an issue on button group dropdowns where the background color was not using the button&#39;s darker color when the dropdown is open.</li>
+<li>Generalized and simplified the open dropdown classes while adding smarter defaults. Instead of <code>.dropdown.open</code>, we now use just <code>.open</code>. On the defaults side, all dropdown menus now have rounded corners to start.</li>
+<li>Improved active <code>.dropdown-toggle</code> styles (for dropdown buttons) by darkening the background and sharpening the inset shadow to match the active state of buttons.</li>
+<li>Direction of animation on progress bars reversed.</li>
+<li>Fixed input-prepend/append issue with uneditable inputs: <code>.uneditable-input</code> was being floated and a missing comma meant its <code>border-radius</code> for the append option wasn&#39;t being applied properly.</li>
+<li>Removed <code>height: auto;</code> from <code>img</code> since it was overriding dimensions set via HTML attributes.</li>
+<li>Fixed an issue of double borders on the top of tables with captions or colgroups.</li>
+<li>Fixed issue with anchor buttons in the <code>.navbar-text</code>. Instead of a general styling on all anchors within an element with that class, we now have a new class to specifically apply appropriate link color.</li>
+<li>Added support for <code>@navbarHeight</code> on the brand/project name and nav links for complete navbar height customization.</li>
+<li>Fixed the black borders on buttons problem in IE7 by removing the border, increasing the line-height, and providing darker background colors.</li>
+<li>Removed excess padding on <code>.search-query</code> inputs in IE7 since it doesn&#39;t have border-radius.</li>
+<li>Updated alert messages in Components to use <code>button</code> elements as close icons instead of <code>a</code>. Both can be used, but an <code>a</code> will require <code>href=&quot;#&quot;</code> for dismissal on iOS devices.</li>
+<li>Fixed an issue with prepended/appended inputs in Firefox where <code>select</code> elements required two clicks to toggle the dropdown. Resolved by moving the <code>position: relative</code> to the <code>select</code> by default instead of on <code>:focus</code>.</li>
+<li>Added a new mixin, <code>.backface-visibility</code>, to help refine CSS 3D tranforms. Examples and explanation of usage can be found on <a href="http://css-tricks.com/almanac/properties/b/backface-visibility/">CSS Tricks</a>.</li>
+<li>Changed specificity of grid classes in responsive layouts under 767px to accurately target <code>input</code>, <code>select</code>, and <code>textarea</code> elements that use <code>.span*</code> classes.</li>
+<li>Horizontal description lists, <code>.dl-horizontal</code>, now truncate terms that are too long to fit in their fixed-width column. In the &lt; 767px responsive layout, they change to their default stacked layout.</li>
+<li>Changed tabbable tabs to prevent issues in left and right aligned tabs. <code>.tab-content</code> would not growing to its parent&#39;s full width due to <code>display: table</code>. We removed that and the <code>width: 100%</code> and instead just set <code>overflow: auto</code> to clear the left and right aligned tabs.</li>
+<li>Updated thumbnails to support fluid grid column sizing.</li>
+<li>Added <code>&gt;</code> to most of the button group selectors</li>
+<li>Added new variable, <code>@inputBorderRadius</code>, to all form controls that previously made use of the static <code>3px</code> value everywhere.</li>
+<li>Changed the way we do <code>border-radius</code> for tables. Instead of the regular mixin that zeros out all other corners, we specify one corner only so they can be combined for use on single column table headers.</li>
+<li>Updated Glyphicons Halflings from 1.5 to 1.6, introducing 20 new icons.</li>
+<li>Added an <code>offset</code> paramater to the <code>.makeColumn</code>.</li>
+<li>Increased the specificity of all tabbable nav selectors to include <code>.nav-collapse</code> to appropriately scope the responsive navbar behavior.</li>
+<li>Fixed uneditable inputs: text now cuts off and does not wrap, making it behave just like a default <code>input</code>.</li>
+<li>Labels and badges are now <code>vertical-align: baseline;</code> so they line up with surrounding text.</li>
+</ul>
+<h3>Javascript</h3>
+<ul>
+<li>Add jshint support</li>
+<li>Add travis-ci support w/ headless phantom integration</li>
+<li>Replace UA sniffing in bootstrap-transitions.js</li>
+<li>Add MSTransitionEnd event to transition plugin</li>
+<li>Fix pause method in carousel (shouldn&#39;t restart when hovering over controls)</li>
+<li>Fix crazy opera bug #1776</li>
+<li>Don&#39;t open dropdown if target element is disabled</li>
+<li>Always select last item in scrollspy if you&#39;ve reached the bottom of the document or element</li>
+<li>Typeahead should escape regexp special chars</li>
+<li>If interval is false on carousel, do not auto-cycle</li>
+<li>Add preventDefault support for all initial event types (show, close, hide, etc.)</li>
+<li>Fix collapse bug in ie7+ for initial collapse in</li>
+<li>Fix nested collapse bug</li>
+<li>If transitioning collapse, don&#39;t start new transition</li>
+<li>Try to autodetect when to use html/text method in tooltip/popovers to help prevent xss</li>
+<li>Add bootstrap + bootstrap.min.js to gh-pages for @remy and jsbin support</li>
+</ul>
+<h3>Documentation and repo</h3>
+<ul>
+<li>Combined badges and labels into a single LESS file, labels-badges.less, to reduce repeated CSS.</li>
+<li>Separated responsive features into multiple files. We now have a file for each grouping of media queries (tablets and down, tablets to desktops, and large desktops). Additionally, the visible/hidden utility classes and the responsive navbar are in their own files. The output is the same in the compiled CSS, but this should give folks a bit more flexibility.</li>
+<li>Added a new CSS Tests page in the docs (not in the top nav) for better testing of edge cases and extending the use of standard components.</li>
+<li>Removed the bootstrap.zip file from the repo and the make process for faster building and a lighter repo. From now on, the zip will only be in the documentation branch.</li>
+<li>Fixed incorrect use of class instead of ID for tabs example and added documentation for multiple ways of toggling tabs.</li>
+<li>Fixed required markup listed for the specialized navbar search field.</li>
+<li>Removed all mention of <code>@siteWidth</code>, a variable no longer in use.</li>
+<li>Removed mentions of unused <code>@buttonPrimaryBackground</code> variable, which is no longer in use.</li>
+<li>Updated LESS docs page to include all the new variables we added in previous releases.</li>
+<li>Removed broken &quot;dropup&quot; menus from tabs and pills examples (shouldn&#39;t have been there in the first place).</li>
+<li>Replaced <code>.badge-error</code> with <code>.badge-important</code>. The error option is not a valid class and was a typo in the docs.</li>
+<li>Fixed mention of how to add plain text to the navbar. Previously the docs stated you only needed a <code>p</code> tag, but the required HTML is any element with class <code>.navbar-text</code>.</li>
+<li>Clarified the use of <code>.tabbable</code> for tabs. The wrapping class is only required for left and right tabs to clear their floats. Also added mention of <code>.fade</code> to fade in tabs.</li>
+<li>Updated forms documentation:<ul>
+<li>Remove unnecessary duplicate help text in first example</li>
+<li>Added mention of required <code>input</code> class, <code>.search-query</code>, for the search form variation</li>
+<li>Removed incorrect mention of form fields being <code>display: block;</code> to start as fields are <code>inline-block</code> to start.</li>
+</ul>
+</li>
+<li>Added mention of <code>data-target</code> attribute for the dropdowns javascript plugin to show how to keep custom URLs intact on links with <code>.dropdown-toggle</code> class.</li>
+<li>Updated the Kippt screenshot on the homepage to reflect their recent responsive redesign and upgrade to 2.0.2.</li>
+</ul>
+<h2>2.0.2 (March 12, 2012)</h2>
+<p>Overview of docs changes, bugfixes, and new features.</p>
+<h3>Documentation updates</h3>
+<ul>
+<li>All docs pages now have distinct titles, such as <em>Scaffolding &middot; Twitter Bootstrap</em>.</li>
+<li>Updated the Apple touch icons (now black on black instead of the blue grid) and fixed the links to them in the docs.</li>
+<li>Added new global styles docs section to the Scaffolding page.<ul>
+<li>Required use of HTML5 doctype</li>
+<li>Overview of global typographic and links details</li>
+<li>Mention of our embedded CSS reset via <a href="http://necolas.github.com/normalize.css/">Normalize.css</a></li>
+</ul>
+</li>
+<li>Added version number to the download button on the docs homepage.</li>
+<li>Updated progress bars section to simplify how the classes stack and more clearly indicate the available optional classes and styles.</li>
+<li>Added a new example, <a href="http://soundready.fm">SoundReady.fm</a>, to the homepage</li>
+<li>Added various sizes to the docs for button groups</li>
+</ul>
+<h3>Resolved bugs</h3>
+<ul>
+<li>Removed all IE7 hacks and floats from <code>.input-prepend</code> and <code>.input-append</code>, however, this requires you to <strong>ensure there is no whitespace in your code</strong> between <code>.add-on</code> and the <code>input</code>.</li>
+<li>In <code>.input-prepend</code> and <code>.input-append</code>, added ability to use add-ons on both sides when you chain the selectors.</li>
+<li>Updated lingering <code>.btn-dark</code> reference to <code>.btn-inverse</code>.</li>
+<li>Fixed issue with content being cut off in <code>.tab-content</code> for tabbable sections.</li>
+<li>Updated <code>.navbar .container</code> to use <code>width: auto;</code> to start and then reset the fixed widths via the <code>#gridSystem</code> mixin (it&#39;s a little dirty, but required to avoid adding another class).</li>
+<li>Modal footer buttons are now aligned by their parent via <code>text-align: right;</code> instead of <code>float: right</code> on the button level. This was changed to allow the use of <code>.pull-left</code> and <code>.pull-right</code> to align buttons easily. Double check your button order with this change!</li>
+<li>Fixed problem where default striped progress bar was green instead of blue.</li>
+<li>Fixed CSS selector used for <code>input</code> and <code>textarea</code> grid sizes to properly apply the CSS (was <code>input &gt; .span*</code> and now is <code>input.span*</code>).</li>
+</ul>
+<h3>New features</h3>
+<ul>
+<li>Horizontal dividers support added to nav lists</li>
+<li>Added basic version of badges</li>
+<li>Added visible/hidden classes for devices</li>
+<li>Added support for buttons in input-prepend/append component</li>
+<li>Added .navbar-fixed-bottom support</li>
+<li>Added .dropup support for dropdown menus to pop them upward instead of downward (this is automatically done for the newly added fixed bottom navbar).</li>
+<li>Added mixin for <a href="http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/">new image replacement technique</a></li>
+<li>Added pause on hover for the carousel</li>
+<li>Added tons of new variables for typography, buttons, forms, dropdowns, navbar, and more for the LESS pros out there. These variables have also been reflected on the Customize page.</li>
+<li>Added new horizontal description list variation</li>
+<li>Added <code>.disabled</code> class support to the pager component (also added a mention of this to the docs)</li>
+<li>Added <code>.well-large</code> and <code>.well-small</code> classes for extending the well component</li>
+</ul>
+<p>For a full issue-by-issue rundown of the release, check out the now closed <a href="https://github.com/twitter/bootstrap/issues?sort=created&amp;direction=desc&amp;state=closed&amp;page=1&amp;milestone=9">2.0.2 milestone on GitHub</a></p>
+<h2>v2.0.1 (February 17, 2012)</h2>
+<p>Overview of changes:</p>
+<ul>
+<li>Previously the docs called for use of <code>.control-label</code> in the examples, but the CSS didn&#39;t make clear use of it. This class is required for horizontal forms and has been reflected in the CSS.</li>
+<li>We&#39;ve tried our best to improve rendering of buttons and icons across all browsers. Some issues remain; Firefox throws an <code>!important</code>on <code>line-height</code> for inputs, so that&#39;s the big one.</li>
+<li>We refined the label component style to move away from uppercase.</li>
+<li>Added the black button option, <code>.btn-inverse</code>.</li>
+<li>Added a mini button class, <code>.btn-mini</code>.</li>
+<li>We had to re-add the protocol, <code>http:</code> to the HTML5 schim because IE7-8 wouldn&#39;t recognize it, dropping some HTML5 support for those browsers and introducing major performance issues.</li>
+<li>Resolved some issues with responsive layouts where media queries would overlap at 768px and 980px.</li>
+<li>Rearranged Scaffolding docs page to split fixed and fluid grid systems.</li>
+<li>Tons of docs updates for typos and language changes.</li>
+</ul>
+<p>For full list of changes, see the now closed <a href="https://github.com/twitter/bootstrap/issues?milestone=8&amp;state=closed">v2.0.1 milestone</a>.</p>
+<h2>v2.0.0 (January 28, 2012)</h2>
+<p>Complete rewrite of the library. For full details, head to the upgrading doc at <a href="http://twitter.github.com/bootstrap/upgrading.html">http://twitter.github.com/bootstrap/upgrading.html</a>.</p>
+<h2>v1.4.0</h2>
+<h3>Key bug fixes and changes</h3>
+<ul>
+<li><strong>Updated tables</strong> to make no border the default and add options for condensed and bordered versions</li>
+<li><strong>Updated form states</strong> to expand on error styles and provide warning and success variations</li>
+<li>New javascript plugin for button states</li>
+<li>Switched to strict mode for Javascript plugins</li>
+<li>Added more data attribute controls to our plugins</li>
+<li>Full list of 25+ issues fixed: <a href="https://github.com/twitter/bootstrap/issues?milestone=6&amp;state=closed">https://github.com/twitter/bootstrap/issues?milestone=6&amp;state=closed</a></li>
+</ul>
+<h2>v1.3.0</h2>
+<h3>New features</h3>
+<ul>
+<li><strong>Javascript plugins</strong> for modals, alerts, dropdowns, scrollspy, tabs, tooltips, and popovers that work with jQuery and Ender</li>
+<li><strong>Massively updated docs</strong> for both the main page and for the new javascript plugins</li>
+<li><strong>Inline labels</strong> for marking inline content with key visual flags</li>
+<li>Media thumbnails</li>
+<li>Breadcrumbs</li>
+</ul>
+<h3>Updated docs</h3>
+<ul>
+<li>Added complete javascript page with detailed documentation for how to use plugins</li>
+<li>Three complete example pages of using Bootstrap, linked from main docs page with thumbnails</li>
+<li>Added section for compiling Less, for guidelines on how to recompile Bootstrap with Less</li>
+<li>Added section for customizing grid variables in Less to roll your own grid system</li>
+<li>Added section for code for using pre and code tags</li>
+<li>Added section for form field sizes that match grid column sizes</li>
+</ul>
+<h3>Key bug fixes and changes</h3>
+<ul>
+<li>Updated table styles to be just a tad bit more refined</li>
+<li>Added new form input sizes based on the Bootstrap grid system (meaning now you can do <code>input.span5</code> for a 280px-wide input)</li>
+<li>Removed <code>:focus</code> states from <code>:active</code> links in Firefox</li>
+<li>Fixed unqualified <code>.clearfix</code> in forms.less that added bottom margin to all containers</li>
+<li>Updated <code>.container()</code> mixing to be <code>.fixed-container()</code> to prevent conflicts when compiling</li>
+<li>Added focus states (either <code>box-shadow</code> or <code>outline</code> on <code>:focus</code>) to all buttons, links, and inputs</li>
+<li>No longer require <code>h3</code> in topbar, but still support for backwards compatibility</li>
+</ul>
+<h2>v1.2.0</h2>
+<ul>
+<li><strong>Dropdowns refactored</strong> to be extensible (now work in ul.tabs)</li>
+<li><strong>Added HTML5 form support</strong> by generalizing the form selectors (e.g., input instead of input[type=text|password])</li>
+<li><strong>Gradients back in IE</strong>, but removed rounded corners in IE9 to prevent background bleed on buttons and alert messages</li>
+<li><strong>Simplified the grid CSS</strong> by removing the static .span1-16 classes in favor of CSS-style regex for column styles in the grid</li>
+<li><strong>Added .one-third and .two-thirds columns</strong> to the grid system</li>
+<li>Fixed bug in disabled buttons where they received :active styles</li>
+<li>Bug fixes</li>
+</ul>
+<h2>v1.1.1</h2>
+<ul>
+<li><strong>Redesigned alerts</strong> to be more readable</li>
+<li><strong>Refactored buttons and alerts CSS</strong> to be simpler</li>
+<li>Updated grid system to be more specific and not require .column or columns</li>
+<li>Improved on specificity of CSS selectors by removing unnecessary tag and parent selectors</li>
+<li>Miscellaneous updates to docs</li>
+<li>Bug fixes</li>
+</ul>
+<h2>v1.1.0</h2>
+<ul>
+<li><strong>Added support for IE7 and IE8</strong></li>
+<li>Added examples directory with first example usage of Bootstrap for a simple website</li>
+<li>Syntax fixes for gradients and color-stops</li>
+<li>Miscellaneous updates to docs</li>
+<li>Bug fixes</li>
+</ul>
+<h2>v1.0.0</h2>
+<ul>
+<li><strong>Initial release</strong></li>
+</ul>

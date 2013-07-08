@@ -17,7 +17,7 @@ get_header();
 				<header class="entry-header">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 
-					<div class="entry-meta row-fluid">
+					<div class="entry-meta row">
 					
 						<?php bright_posted_on(); ?>
 						
@@ -104,7 +104,7 @@ get_header();
 
 				</div><!-- .entry-content -->
 
-				<footer class="entry-meta row-fluid">
+				<footer class="entry-meta row">
 				
 					<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 					

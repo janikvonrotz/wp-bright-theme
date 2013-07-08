@@ -18,7 +18,7 @@
 	
 	<?php if ( is_user_logged_in() ) : ?>
 	
-		<footer class="entry-meta row-fluid">			
+		<footer class="entry-meta row">			
 			<?php bright_edit_post_link(); ?>			
 		</footer><!-- .entry-meta -->
 	
