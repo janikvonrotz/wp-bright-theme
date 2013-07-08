@@ -87,6 +87,10 @@ a:focus {
   margin-left: 0px;
   clear: left;
 }
+/* wp images */
+.wp-caption {
+  max-width: 100%;
+}
 /*
 #--------------------------------------------------#
 # navigation post
