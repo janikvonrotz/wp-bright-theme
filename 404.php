@@ -7,8 +7,8 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<div id="primary" class="content-area row">
+		<div id="content" class="site-content span7 offset1" role="main">
 
 			<article id="post-0" class="post not-found">
 				<header class="entry-header">

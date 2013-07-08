@@ -43,7 +43,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 	
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) { ?>
-			<div class="row-fluid">
+			<div class="row">
 				<div class="span12 pagination-centered logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
@@ -52,14 +52,14 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 			</div>
 		<?php } // if ( ! empty( $header_image ) ) ?>
 		
-		<div class="row-fluid">
+		<div class="row">
 			<div class="site-branding span12 pagination-centered page-header">
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h1 class="site-description"><small><?php bloginfo( 'description' ); ?></small></h1>
 			</div>
 		</div>
 		
-		<div class="row-fluid">
+		<div class="row">
 			<nav id="site-navigation" class="navigation-main span12 pagination-centered" role="navigation">
 				
 				<p class="visible-phone toggle-menu"><i class="icon-block-menu"></i></p>

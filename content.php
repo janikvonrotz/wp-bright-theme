@@ -7,7 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-	<header class="entry-header row-fluid">				
+	<header class="entry-header">				
 		
 			<div class="alignleft">
 			<?php the_post_thumbnail('thumbnail', array('class' => 'img-circle'));  ?>
@@ -18,7 +18,7 @@
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta row-fluid">
+		<div class="entry-meta row">
 			<?php bright_posted_on(); ?>
 			<?php bright_posted_by(); ?>			
 		</div><!-- .entry-meta -->
@@ -36,7 +36,7 @@
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 
-	<footer class="entry-meta row-fluid">
+	<footer class="entry-meta row">
 	
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			
