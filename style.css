@@ -88,8 +88,9 @@ a:focus {
   clear: left;
 }
 /* wp images */
-.wp-caption {
-  max-width: 100%;
+.wp-caption,
+img {
+  max-width: 100%!important;
 }
 /*
 #--------------------------------------------------#
