@@ -40,14 +40,13 @@ function bright_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	if ( function_exists( 'add_image_size' ) ) { 
-		add_image_size( 'thumbnail-banner', 670, 999, false ); 
+		add_image_size( 'thumbnail-banner', 670, 999, true ); 
+		add_image_size( 'msapplication-TileImage', 144, 144, true ); 
 	}
 	if ( function_exists( 'add_theme_support' ) ) {
 		add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 'thumbnail-banner' ); // default Post Thumbnail dimensions   
 	}
-
-
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
@@ -90,6 +89,8 @@ function bright_register_custom_background() {
 		define( 'BACKGROUND_COLOR', $args['default-color'] );
 		if ( ! empty( $args['default-image'] ) )
 			define( 'BACKGROUND_IMAGE', $args['default-image'] );
+		
+		/* function deprecated */
 		add_custom_background();
 	}
 }
@@ -178,11 +179,9 @@ add_action( 'wp_enqueue_scripts', 'bright_styles' );
 function bright_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		
+		// wp comment-reply
 		wp_enqueue_script( 'comment-reply' );
-	}
-
-	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'bright-keyboard-image-navigation', get_template_directory_uri() . '/js/bright-keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 	
 	// jquery
@@ -207,8 +206,14 @@ function bright_scripts() {
 	wp_enqueue_script( 'Responsive', get_template_directory_uri() . '/js/Responsive.js', array(), false, true );
 	wp_enqueue_script( 'MediaQuery', get_template_directory_uri() . '/js/MediaQuery.js', array(), false, true );   
 	wp_enqueue_script( 'Navigation', get_template_directory_uri() . '/js/Navigation.js', array(), false, true );    
-	wp_enqueue_script( 'PageSwitch', get_template_directory_uri() . '/js/PageSwitch.js', array(), false, true );     
-
+    
+	if ( is_singular() && wp_attachment_is_image() ) {
+		// _s keyboard image navigation
+		wp_enqueue_script( 'bright-keyboard-image-navigation', get_template_directory_uri() . '/js/bright-keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+		
+		// custom
+		wp_enqueue_script( 'PageSwitch', get_template_directory_uri() . '/js/PageSwitch.js', array(), false, true ); 
+	}
 }
 add_action( 'wp_enqueue_scripts', 'bright_scripts' );
 

@@ -60,7 +60,7 @@ function bright_custom_header_setup() {
 add_action( 'after_setup_theme', 'bright_custom_header_setup' );
 
 /**
- * Shiv for get_custom_header().
+ * function for get_custom_header().
  *
  * get_custom_header() was introduced to WordPress
  * in version 3.4. To provide backward compatibility
@@ -72,7 +72,6 @@ add_action( 'after_setup_theme', 'bright_custom_header_setup' );
  *
  * @package Bright
  */
-
 if ( ! function_exists( 'get_custom_header' ) ) {
 	function get_custom_header() {
 		return (object) array(
@@ -83,6 +82,9 @@ if ( ! function_exists( 'get_custom_header' ) ) {
 		);
 	}
 }
+
+
+
 
 if ( ! function_exists( 'bright_header_style' ) ) :
 /**
@@ -105,18 +107,13 @@ function bright_header_style() {
 		// Has the text been hidden?
 		if ( 'blank' == $header_text_color ) :
 	?>
-		.site-title,
-		.site-description {
-			position: absolute;
-			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-			clip: rect(1px, 1px, 1px, 1px);
-		}
+
 	<?php
 		// If the user has set a custom color for the text use that
 		else :
 	?>
 		.site-title a,
-		.site-description {
+		.site-description small{
 			color: #<?php echo $header_text_color; ?>;
 		}
 	<?php endif; ?>
@@ -124,6 +121,8 @@ function bright_header_style() {
 	<?php
 }
 endif; // bright_header_style
+
+
 
 if ( ! function_exists( 'bright_admin_header_style' ) ) :
 /**

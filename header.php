@@ -34,6 +34,7 @@ if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
 </script>
 
 <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
