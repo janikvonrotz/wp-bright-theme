@@ -36,7 +36,7 @@ function bright_custom_header_setup() {
 	$args = array(
 		'default-image'          => '',
 		'default-text-color'     => '000',
-		'width'                  => 1000,
+		'width'                  => 1170,
 		'height'                 => 250,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'bright_header_style',

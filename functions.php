@@ -200,19 +200,14 @@ function bright_scripts() {
 	wp_enqueue_script( 'hammerjs', get_template_directory_uri() . '/components/hammerjs/dist/jquery.hammer.min.js', array(), false, true );   
 
 	// jquery.fitvids
-	wp_enqueue_script( 'jquery.fitvids', get_template_directory_uri() . '/components/jquery.fitvids/jquery.fitvids.min.js', array(), false, true );	
+	wp_enqueue_script( 'jquery.fitvids', get_template_directory_uri() . '/components/fitvids/jquery.fitvids.min.js', array(), false, true );	
 	
 	// custom
 	wp_enqueue_script( 'Responsive', get_template_directory_uri() . '/js/Responsive.js', array(), false, true );
-	wp_enqueue_script( 'MediaQuery', get_template_directory_uri() . '/js/MediaQuery.js', array(), false, true );   
-	wp_enqueue_script( 'Navigation', get_template_directory_uri() . '/js/Navigation.js', array(), false, true );    
     
 	if ( is_singular() && wp_attachment_is_image() ) {
-		// _s keyboard image navigation
-		wp_enqueue_script( 'bright-keyboard-image-navigation', get_template_directory_uri() . '/js/bright-keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
-		
-		// custom
-		wp_enqueue_script( 'PageSwitch', get_template_directory_uri() . '/js/PageSwitch.js', array(), false, true ); 
+		// keyboard image navigation and swish for next page
+		wp_enqueue_script( 'Navigation', get_template_directory_uri() . '/js/Navigation.js', array( 'jquery' ), '20120202' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'bright_scripts' );
