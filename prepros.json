@@ -1,0 +1,168 @@
+{
+  "id": "18f6c19e",
+  "name": "WP-Bright-Theme",
+  "files": [
+    {
+      "id": "76983263",
+      "pid": "18f6c19e",
+      "name": "style.less",
+      "type": "Less",
+      "input": "css\\colors\\brand\\style.less",
+      "output": "css\\colors\\brand\\style.css",
+      "config": {
+        "autoCompile": false,
+        "compress": false,
+        "lineNumbers": false,
+        "strictMath": false,
+        "strictUnits": false,
+        "autoprefixer": false
+      }
+    },
+    {
+      "id": "1a7a0eda",
+      "pid": "18f6c19e",
+      "name": "easytabs.js",
+      "type": "JS",
+      "input": "css\\fonts\\junction\\specimen_files\\easytabs.js",
+      "output": "css\\fonts\\junction\\specimen_files\\{{jsMinPath}}\\easytabs.min.js",
+      "config": {
+        "autoCompile": false,
+        "uglify": true,
+        "mangle": true
+      }
+    },
+    {
+      "id": "64e9579c",
+      "pid": "18f6c19e",
+      "name": "easytabs.js",
+      "type": "JS",
+      "input": "css\\fonts\\raleway_thin\\specimen_files\\easytabs.js",
+      "output": "css\\fonts\\raleway_thin\\specimen_files\\{{jsMinPath}}\\easytabs.min.js",
+      "config": {
+        "autoCompile": false,
+        "uglify": true,
+        "mangle": true
+      }
+    },
+    {
+      "id": "e1665c6b",
+      "pid": "18f6c19e",
+      "name": "lte-ie7.js",
+      "type": "JS",
+      "input": "css\\icon-fonts\\metro\\lte-ie7.js",
+      "output": "css\\icon-fonts\\metro\\{{jsMinPath}}\\lte-ie7.min.js",
+      "config": {
+        "autoCompile": false,
+        "uglify": true,
+        "mangle": true
+      }
+    },
+    {
+      "id": "23481922",
+      "pid": "18f6c19e",
+      "name": "Gruntfile.js",
+      "type": "JS",
+      "input": "Gruntfile.js",
+      "output": "{{jsMinPath}}\\Gruntfile.min.js",
+      "config": {
+        "autoCompile": false,
+        "uglify": true,
+        "mangle": true,
+        "autoprefixerBrowsers": ""
+      }
+    },
+    {
+      "id": "ca3ce475",
+      "pid": "18f6c19e",
+      "name": "Customizer.js",
+      "type": "JS",
+      "input": "js\\Customizer.js",
+      "output": "js\\{{jsMinPath}}\\Customizer.min.js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "autoprefixerBrowsers": ""
+      }
+    },
+    {
+      "id": "0bb46780",
+      "pid": "18f6c19e",
+      "name": "Navigation.js",
+      "type": "JS",
+      "input": "js\\Navigation.js",
+      "output": "js\\{{jsMinPath}}\\Navigation.min.js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "autoprefixerBrowsers": ""
+      }
+    },
+    {
+      "id": "0cc4f132",
+      "pid": "18f6c19e",
+      "name": "Responsive.js",
+      "type": "JS",
+      "input": "js\\Responsive.js",
+      "output": "js\\{{jsMinPath}}\\Responsive.min.js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "autoprefixerBrowsers": ""
+      }
+    },
+    {
+      "id": "2e8f9ea2",
+      "pid": "18f6c19e",
+      "name": "README.md",
+      "type": "MD",
+      "input": "README.md",
+      "output": "README.html",
+      "config": {
+        "autoCompile": true,
+        "sanitize": false,
+        "gfm": true,
+        "autoprefixerBrowsers": ""
+      }
+    },
+    {
+      "id": "d683ca62",
+      "pid": "18f6c19e",
+      "name": "style.less",
+      "type": "Less",
+      "input": "style.less",
+      "output": "style.css",
+      "config": {
+        "autoCompile": true,
+        "compress": false,
+        "lineNumbers": false,
+        "strictMath": false,
+        "strictUnits": false,
+        "autoprefixer": false,
+        "autoprefixerBrowsers": ""
+      }
+    }
+  ],
+  "imports": [],
+  "config": {
+    "liveRefresh": true,
+    "liveRefreshDelay": 0,
+    "filterPatterns": "bower_components, node_modules, components",
+    "useCustomServer": false,
+    "customServerUrl": "",
+    "cssPath": "css",
+    "jsPath": "js",
+    "htmlPath": "html",
+    "jsMinPath": "",
+    "autoprefixerBrowsers": "",
+    "ftpHost": "",
+    "ftpPort": "21",
+    "ftpRemotePath": "",
+    "ftpIgnorePreprocessorFiles": true,
+    "ftpExcludePatterns": "",
+    "ftpPassword": "",
+    "ftpUsername": ""
+  }
+}
