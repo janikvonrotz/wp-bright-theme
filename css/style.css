@@ -1,0 +1,280 @@
+/*
+Theme Name: Bright
+Theme URI: https://github.com/janikvonrotz/WP-Bright-Theme
+Author: Janik von Rotz
+Author URI: http://janikvonrotz.ch/
+Description: The Bright theme is a simple, minimalistic and highly responsive theme based on twitters bootstrap and the newest web libraries
+Version: 1.1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: light, white, one-column, flexible-width, custom-backgroud, custom-header, custom-menu, featured-images, flexible-header, microformats, post-formats, rtl-language-support, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/*
+#--------------------------------------------------#
+# settings
+#--------------------------------------------------#
+*/
+/*
+#--------------------------------------------------#
+# page
+#--------------------------------------------------#
+*/
+body {
+  font-family: 'junctionregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #777777;
+}
+#page {
+  padding-bottom: 1.5em;
+}
+/*
+#--------------------------------------------------#
+# content
+#--------------------------------------------------#
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2185c5;
+  font-family: 'ralewaythin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+}
+p {
+  word-wrap: break-word;
+}
+p.form-allowed-tags > code {
+  white-space: normal;
+}
+a {
+  color: #2185c5;
+}
+a:hover,
+a:focus {
+  background-color: #7ecefd;
+  color: #3e454c;
+  text-decoration: none;
+}
+/* entry meta */
+.entry-meta .span12 {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta .span6:nth-child(2n + 3) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta .span4:nth-child(3n + 4) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta .span3:nth-child(4n + 5) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta .span2:nth-child(6n + 7) {
+  margin-left: 0px;
+  clear: left;
+}
+.entry-meta .span1:nth-child(12n + 13) {
+  margin-left: 0px;
+  clear: left;
+}
+/* wp responsive fix */
+.wp-caption,
+img,
+iframe {
+  max-width: 100%!important;
+}
+/*
+#--------------------------------------------------#
+# navigation post
+#--------------------------------------------------#
+*/
+#nav-below {
+  margin-bottom: 1.5em;
+  border-bottom: solid 0.0625em #e6e6e6;
+}
+/*
+#--------------------------------------------------#
+# header
+#--------------------------------------------------#
+*/
+#masthead {
+  padding-bottom: 1.5em;
+}
+.logo {
+  padding-top: 1.5em;
+}
+.page-header {
+  border-bottom: solid 0.0625em #e6e6e6;
+}
+/*
+#--------------------------------------------------#
+# navigation
+#--------------------------------------------------#
+*/
+/* overlay element to close dropdown */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+}
+nav.navigation-main {
+  border-bottom: solid 0.0625em #e6e6e6;
+  padding-bottom: 1.5em;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+}
+/* reset margin space */
+nav ul.nav {
+  margin: 0;
+}
+/* reset backgroundcolor */
+nav ul.nav a {
+  display: block;
+  padding: 0.312em;
+  color: #777777;
+  background-color: #ffffff;
+}
+nav ul.nav a:hover {
+  color: #2185c5;
+  background-color: #ffffff;
+}
+/* show menu */
+nav ul li.active ul {
+  display: block;
+}
+nav ul ul {
+  position: absolute;
+}
+/*
+#--------------------------------------------------#
+# navigation mobile
+#--------------------------------------------------#
+*/
+.phone nav > ul {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  max-width: 150px;
+}
+.phone nav ul li {
+  display: block;
+}
+.phone nav ul ul {
+  position: relative;
+}
+.phone nav ul li.active {
+  border: solid 0.0625em #e6e6e6;
+}
+/*
+#--------------------------------------------------#
+# article
+#--------------------------------------------------#
+*/
+/* article layout */
+article {
+  border-bottom: solid 0.0625em #e6e6e6;
+  margin-bottom: 1.5em;
+}
+/* article element layout */
+article footer,
+article header,
+article .entry-content,
+article .comment-content,
+article .entry-summary {
+  padding-bottom: 1.5em;
+}
+/* image alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+/*
+#--------------------------------------------------#
+# widget, sidebar
+#--------------------------------------------------#
+*/
+#secondary {
+  margin-bottom: 1.5em;
+}
+.widget {
+  border-bottom: solid 0.0625em #e6e6e6;
+}
+/*
+#--------------------------------------------------#
+# comments
+#--------------------------------------------------#
+*/
+#comments {
+  margin-bottom: 1.5em;
+  border-bottom: solid 0.0625em #e6e6e6;
+}
+#comments ul.children {
+  list-style: none;
+}
+/*
+#--------------------------------------------------#
+# icons
+#--------------------------------------------------#
+*/
+/* reset */
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: none;
+  display: inline;
+  margin-top: 0px;
+  vertical-align: text-bottom;
+}
+/* default icon settings */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-size: 22px;
+}
+/* icons in nav */
+nav [class^="icon-"],
+[class*=" icon-"] {
+  padding-right: 0.312em;
+}
+/*
+#--------------------------------------------------#
+# gallery
+#--------------------------------------------------#
+*/
+.gallery img {
+  border: none;
+}
+/*
+#--------------------------------------------------#
+# plugins
+#--------------------------------------------------#
+*/
+/* jetpack */
+#infinite-handle {
+  display: none;
+}
